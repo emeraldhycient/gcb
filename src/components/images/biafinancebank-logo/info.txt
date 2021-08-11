@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Chunk
+font link: https://www.theleagueofmoveabletype.com/chunk
+font author: Meredith Mandel
+font author site: https://www.theleagueofmoveabletype.com/
+
+
+icon designer: Alfredo @ IconsAlfredo.com
+icon designer link: /AlfredoCreates
+        
+{"bg-gradient-0":"#0A3732","bg-gradient-1":"#55C388","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      

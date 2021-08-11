@@ -1,0 +1,72 @@
+.dash {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: none;
+    display: flex;
+}
+
+.sidebar {
+    width: 12%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #091018;
+    padding-top: 90px;
+}
+
+.sidebar a {
+    padding: 6px 0px 6px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #cacaca;
+}
+
+.sidebar a:hover {
+    color: #c0ae0b;
+}
+
+.dashcontainer {
+    width: 88%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #222e3a;
+    color: #23153c;
+}
+
+.iconshadow {
+    background-color: #fafafa;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.iconshadow i {
+    color: #201b7f;
+    /* color: rgb(22, 160, 148)*/
+}
+
+.active {
+    background-color: #356786;
+}
+
+td {
+    color: #cacaca
+}
+
+@media (max-width:770px) {
+    .hide {
+        display: none;
+    }
+}
+
+.text-blue {
+    color: #3943fe;
+}
+
+.bg-blue {
+    background-color: #3943fe;
+    color: #fafafa
+}
