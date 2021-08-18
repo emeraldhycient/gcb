@@ -7,7 +7,7 @@ import logo from "../images/biafinancebank-logo/vector/default-monochrome-white.
 
 function Header() {
     return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg shadow">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <i className="fa fa-bars text-white" style={{ fontSize: 30 }}></i>
             </button>
