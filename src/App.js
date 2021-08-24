@@ -21,6 +21,8 @@ import Card from "./components/user/Cards";
 import Transactions from "./components/user/Transactions";
 import Loans from "./components/user/Loans";
 import Settings from "./components/user/Settings";
+import Transfer from "./components/user/Transfer";
+import Mailcash from "./components/user/Mailcash";
 
 //admin dashboard
 import Admin from './components/admin/Admin'
@@ -49,6 +51,8 @@ function App() {
         <Route path="/user/dashboard/cards" component={Card} />
         <Route path="/user/dashboard/transactions" component={Transactions} />
         <Route path="/user/dashboard/loans" component={Loans} />
+        <Route path="/user/dashboard/transfer" component={Transfer} />
+        <Route path="/user/dashboard/mailcash" component={Mailcash} />
         <Route path="/user/dashboard/settings" component={Settings} />
 
         <Route path="/admin/dashboard" exact component={Admin} />

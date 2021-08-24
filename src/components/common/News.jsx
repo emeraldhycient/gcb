@@ -12,7 +12,7 @@ function News() {
                     <div className="col-md-4 bg-light mb-4">
                         <div className="card">
                             <div className="card-body p-0">
-                                <img src="https://images.unsplash.com/photo-1589666564459-93cdd3ab856a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" className="rounded  w-100" height="300px" />
+                            <img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=691&q=80" alt="" className="rounded  w-100" />
                                 <h5 className="mt-3 px-3 w-100">Why Savings is very crucial For Someone That Plans To Retire.</h5>
                                 <h6 className="p my-4 mx-2 text-muted">First and foremost, saving money is important because it helps protect you in the event of a financial emergency. Additionally, saving money can help you pay for large purchases, avoid debt, reduce your financial stress, leave a financial legacy, and provide you with a greater sense of financial freedom...</h6>
                             </div>

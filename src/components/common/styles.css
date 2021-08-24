@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(5, 83, 12);
+    background-color: #091018;
 }
 
 #hero {
@@ -9,7 +9,7 @@
 }
 
 .dashboard {
-    border: 2px solid rgb(106, 201, 185);
+    border: 2px solid #3943fe;
     color: whitesmoke
 }
 

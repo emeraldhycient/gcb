@@ -1,8 +1,9 @@
 import React from "react";
 
-/*import "./assets/app.css"*/
 import "./assets/cs.css";
-/*import "./assets/fonts.css"
+import "./assets/style.css";
+/*import "./assets/app.css"
+import "./assets/fonts.css"
 import "./assets/style.css"
 import "./assets/font-awesome.css"*/
 
@@ -15,9 +16,9 @@ function Index() {
     <div>
       <main className="main">
         <Header />
+        <div id="conveythis-wrapper-main"><a href="https://www.conveythis.com" class="conveythis-no-translate notranslate" title="ConveyThis" >ConveyThis</a></div>
         <section
-          className="section swiper-container swiper-slider swiper-slider-1 "
-          style={{ backgroundColor: "#65b62b" }}
+          className="section swiper-container swiper-slider swiper-slider-1 mySwiper bg-light-black"
           data-loop="true"
           data-autoplay="5000"
           data-simulate-touch="false"
@@ -45,7 +46,7 @@ function Index() {
                         for high-quality and reliable banking services.
                       </p>
                       <a
-                        className="button button-lg button-primary button-icon button-icon-left"
+                        className="button button-lg button-icon button-icon-left bg-blue shadow"
                         href="/login"
                         data-caption-animate="fadeInUp"
                         data-caption-delay="450"
@@ -136,10 +137,10 @@ function Index() {
             <div className="swiper-pagination"></div>
           </div>
         </section>
-        <section className="section section-negative">
+        <section className="section section-negative bg-black">
           <div className="container section-negative-inner">
             <div className="row row-30 justify-content-center row-flex">
-              <div className="col-md-6 col-lg-4">
+              <div className="col-md-6 col-lg-4 shadow">
                 <div className="counter-boxed">
                   <div className="counter-boxed-top">
                     <div className="counter-boxed-media">
@@ -153,7 +154,7 @@ function Index() {
                     <div className="counter-boxed-title">
                       <div className="subtitle">More than</div>
                       <div className="counter-wrap">
-                        <div className="counter heading-2">23754</div>
+                        <div className="counter heading-2 text-blue">23754</div>
                       </div>
                       <div className="title heading-5">Issued Cards</div>
                     </div>
@@ -180,7 +181,7 @@ function Index() {
                     <div className="counter-boxed-title">
                       <div className="subtitle">Up to</div>
                       <div className="counter-wrap">
-                        <div className="counter heading-2">30</div>
+                        <div className="counter heading-2 text-blue">30</div>
                         <div className="heading-2">%</div>
                       </div>
                       <div className="title heading-5">Cashback</div>
@@ -208,7 +209,7 @@ function Index() {
                     <div className="counter-boxed-title">
                       <div className="subtitle">Up to</div>
                       <div className="counter-wrap">
-                        <div className="counter heading-2">25</div>
+                        <div className="counter heading-2 text-blue">25</div>
                         <div className="heading-2">%</div>
                       </div>
                       <div className="title heading-5">for Deposits</div>
@@ -245,7 +246,7 @@ function Index() {
                   <ul className="service-list-1">
                     <li className="service-item-1 service-item-1-right unit wow fadeIn">
                       <div className="unit-item">
-                        <div className="icon fas fa-globe"></div>
+                        <div className=" fas fa-globe fa-5x text-blue"></div>
                       </div>
                       <div className="unit-body">
                         <h6 className="title">Various Locations</h6>
@@ -257,7 +258,7 @@ function Index() {
                     </li>
                     <li className="service-item-1 service-item-1-right unit wow fadeIn">
                       <div className="unit-item">
-                        <div className="icon fas fa-mobile"></div>
+                        <div className=" fas fa-mobile fa-5x text-blue"></div>
                       </div>
                       <div className="unit-body">
                         <h6 className="title">Mobile Banking Apps</h6>
@@ -269,7 +270,7 @@ function Index() {
                     </li>
                     <li className="service-item-1 service-item-1-right unit wow fadeIn">
                       <div className="unit-item">
-                        <div className="icon fas fa-phone"></div>
+                        <div className=" fas fa-phone  fa-5x text-blue"></div>
                       </div>
                       <div className="unit-body">
                         <h6 className="title">24/7 Support</h6>
@@ -295,7 +296,7 @@ function Index() {
                   <ul className="service-list-1">
                     <li className="service-item-1 unit wow fadeIn">
                       <div className="unit-item">
-                        <div className="icon fas fa-users"></div>
+                        <div className=" fas fa-users  fa-5x text-blue"></div>
                       </div>
                       <div className="unit-body">
                         <h6 className="title">Family & Friends Programs</h6>
@@ -307,7 +308,7 @@ function Index() {
                     </li>
                     <li className="service-item-1 unit wow fadeIn">
                       <div className="unit-item">
-                        <div className="icon fas fa-id-badge"></div>
+                        <div className=" fas fa-id-badge  fa-5x text-blue"></div>
                       </div>
                       <div className="unit-body">
                         <h6 className="title">Personal Profile</h6>
@@ -319,7 +320,7 @@ function Index() {
                     </li>
                     <li className="service-item-1 unit wow fadeIn">
                       <div className="unit-item">
-                        <div className="icon fas fa-cogs"></div>
+                        <div className=" fas fa-cogs  fa-5x text-blue"></div>
                       </div>
                       <div className="unit-body">
                         <h6 className="title">Easy Account Setup</h6>
@@ -334,7 +335,7 @@ function Index() {
               </div>
               <div className="button-wrap-lg text-center">
                 <a
-                  className="button button-lg button-primary"
+                  className="button button-lg bg-blue shadow"
                   href="/create"
                   >
                   Open Account
@@ -360,7 +361,7 @@ function Index() {
             <div className="row row-30 row-flex">
               <div className="col-sm-6 col-lg-3 wow fadeInRight">
                 <blockquote className="quote quote-default">
-                  <div className="quote-icon fas fa-quote-right"></div>
+                  <div className="quote-icon fas fa-quote-right text-blue"></div>
                   <div className="quote-body">
                     <q className="heading-6">
                       At BIA-FINANCE Bank, we aim to provide top quality banking
@@ -369,8 +370,8 @@ function Index() {
                     </q>
                   </div>
                   <div className="quote-meta">
-                    <div className="author">
-                      <cite>Samuel Chapman</cite>
+                    <div className="author text-blue">
+                      <cite className="text-blue">Samuel Chapman</cite>
                     </div>
                     <div className="position">
                       CEO &amp; Founder of BIA-FINANCE Bank
@@ -383,7 +384,7 @@ function Index() {
                 data-wow-delay="0.1s"
               >
                 <div className="blurb-boxed">
-                  <div className="icon fas fa-bar-chart"></div>
+                  <div className=" fas fa-bar-chart fa-5x text-blue"></div>
                   <h6 className="title">Detailed Statistics</h6>
                   <p className="exeption">
                     Our online banking resource provides free &amp; detailed
@@ -396,7 +397,7 @@ function Index() {
                 data-wow-delay="0.2s"
               >
                 <div className="blurb-boxed">
-                  <div className="icon fa-envelope-open-o"></div>
+                  <div className=" fa-envelope-open-o fa-5x text-blue"></div>
                   <h6 className="title">E-mail Newsletter</h6>
                   <p className="exeption">
                     Subscribe to our newsletter and stay in the know of the
@@ -409,7 +410,7 @@ function Index() {
                 data-wow-delay="0.3s"
               >
                 <div className="blurb-boxed">
-                  <div className="icon fas fa-bullseye"></div>
+                  <div className=" fas fa-bullseye fa-5x text-blue"></div>
                   <h6 className="title">Financial Goals</h6>
                   <p className="exeption">
                     Easily meet your financial goals with our affordable banking
@@ -421,14 +422,14 @@ function Index() {
           </div>
         </section>
 
-        <section className="section section-md bg-primary-dark">
+        <section className="section section-md bg-black">
           <div className="container">
             <div className="row row-fix justify-content-center text-center">
               <div className="col-md-10 col-xl-7">
-                <h2 className="custom-title">
+                <h2 className="custom-title text-light">
                   <span>Latest Statistical Information</span>
                 </h2>
-                <p>
+                <p className="text-light">
                   Our Bank regularly compiles and publishes a range of monetary
                   and financial statistics. These include domestic banking
                   statistics, external finance statistics, and international
@@ -467,7 +468,7 @@ function Index() {
                   id="spline-chart"
                   style={{ width: "100%", margin: " 0 auto" }}
                 ></div>
-                <p>
+                <p className="text-light">
                   With the development of online banking, our number of
                   customers increased up to 6 million worldwide.
                 </p>
@@ -484,7 +485,7 @@ function Index() {
                       </span>
                       <div class="progress-value">25%</div>
                     </div>
-                    <p className="progress-bar-circle-title">Economy</p>
+                    <p className="progress-bar-circle-title text-light">Economy</p>
                   </div>
                   <div className="col-6">
                   <div class="progress yellow">
@@ -496,7 +497,7 @@ function Index() {
                                 </span>
                                 <div class="progress-value">50%</div>
                             </div>
-                    <p className="progress-bar-circle-title">Cashback</p>
+                    <p className="progress-bar-circle-title text-light">Cashback</p>
                   </div>
                   <div className="col-6">
                   <div class="progress yellow">
@@ -508,7 +509,7 @@ function Index() {
                                 </span>
                                 <div class="progress-value">75%</div>
                             </div>
-                    <p className="progress-bar-circle-title">Stability</p>
+                    <p className="progress-bar-circle-title text-light">Stability</p>
                   </div>
                   <div className="col-6">
                   <div class="progress blue">
@@ -520,7 +521,7 @@ function Index() {
                       </span>
                       <div class="progress-value">100%</div>
                     </div>
-                    <p className="progress-bar-circle-title">Guarantee</p>
+                    <p className="progress-bar-circle-title text-light">Guarantee</p>
                   </div>
                 </div>
               </div>
@@ -533,8 +534,8 @@ function Index() {
                 <div className="progress-linear-wrap">
                   <article className="progress-linear">
                     <div className="progress-header">
-                      <p>Financial Consulting</p>
-                      <span className="progress-value">75</span>
+                      <p className="text-light">Financial Consulting</p>
+                      <span className="progress-value text-blue">75</span>
                     </div>
                     <div className="progress-bar-linear-wrap">
                       <div className="progress-bar-linear"></div>
@@ -542,8 +543,8 @@ function Index() {
                   </article>
                   <article className="progress-linear">
                     <div className="progress-header">
-                      <p>Online Reporting</p>
-                      <span className="progress-value">50</span>
+                      <p className="text-light">Online Reporting</p>
+                      <span className="progress-value text-blue">50</span>
                     </div>
                     <div className="progress-bar-linear-wrap">
                       <div className="progress-bar-linear"></div>
@@ -551,8 +552,8 @@ function Index() {
                   </article>
                   <article className="progress-linear">
                     <div className="progress-header">
-                      <p>Online Banking</p>
-                      <span className="progress-value">80</span>
+                      <p className="text-light">Online Banking</p>
+                      <span className="progress-value text-blue">80</span>
                     </div>
                     <div className="progress-bar-linear-wrap">
                       <div className="progress-bar-linear"></div>
@@ -560,8 +561,8 @@ function Index() {
                   </article>
                   <article className="progress-linear">
                     <div className="progress-header">
-                      <p>24/7 Support</p>
-                      <span className="progress-value">75</span>
+                      <p className="text-light">24/7 Support</p>
+                      <span className="progress-value text-blue">75</span>
                     </div>
                     <div className="progress-bar-linear-wrap">
                       <div className="progress-bar-linear"></div>
@@ -571,24 +572,24 @@ function Index() {
               </div>
             </div>
             <div className="button-wrap-lg text-center">
-              <a className="button button-lg button-primary" href="#">
+              <a className="button button-lg bg-blue" href="#">
                 View All Statistics
               </a>
             </div>
           </div>
         </section>
-        <section className="section section-xs bg-primary-gradient">
+        <section className="section section-xs gradient">
           <div className="container">
             <div className="box-cta">
               <div className="box-cta-inner">
-                <h3>
+                <h3 className="text-light">
                   Choose Your{" "}
-                  <span className="font-weight-bold">Bank Account</span> Now!
+                  <span className="font-weight-bold text-light">Bank Account</span> Now!
                 </h3>
               </div>
               <div className="box-cta-inner">
                 <a
-                  className="button button-lg button-primary-dark"
+                  className="button button-lg btn-info text-light shadow"
                   href="/create"
                   >
                   Open
@@ -606,7 +607,7 @@ function Index() {
               <div className="col-sm-6 col-lg-3">
                 <div className="blurb-icon-bordered">
                   <div className="icon-wrap">
-                    <div className="icon fas fa-id-card">
+                    <div className="fas fa-id-card fa-5x text-blue">
                       <span className="I-counter"></span>
                     </div>
                   </div>
@@ -620,7 +621,7 @@ function Index() {
               <div className="col-sm-6 col-lg-3">
                 <div className="blurb-icon-bordered">
                   <div className="icon-wrap">
-                    <div className="icon fas fa-file">
+                    <div className=" fas fa-file  fa-5x text-blue">
                       <span className="index-counter"></span>
                     </div>
                   </div>
@@ -633,8 +634,8 @@ function Index() {
               </div>
               <div className="col-sm-6 col-lg-3">
                 <div className="blurb-icon-bordered">
-                  <div className="icon-wrap">
-                    <div className="icon fas fa-pencil">
+                  <div className="icon-wrap text-blue">
+                    <div className=" fas fa-pencil fa-5x text-blue ">
                       <span className="index-counter"></span>
                     </div>
                   </div>
@@ -648,7 +649,7 @@ function Index() {
               <div className="col-sm-6 col-lg-3">
                 <div className="blurb-icon-bordered">
                   <div className="icon-wrap">
-                    <div className="icon fas fa-credit-card">
+                    <div className="fas fa-credit-card fa-5x text-blue">
                       <span className="index-counter"></span>
                     </div>
                   </div>
@@ -662,16 +663,16 @@ function Index() {
             </div>
           </div>
         </section>
-        <section className="section section-md bg-primary-dark">
+        <section className="section section-md bg-black">
           <div className="container">
-            <h2 className="custom-title text-center">
+            <h2 className="custom-title text-center text-light">
               <span>Frequently Asked Questions</span>
             </h2>
             <div className="row row-40">
               <div className="col-sm-6 col-lg-6">
                 <ul className="list-xl wow fadeIn">
                   <li>
-                    <h5>What is the currency amount for the Blue Card?</h5>
+                    <h5 className="text-light">What is the currency amount for the Blue Card?</h5>
                     <p className="text-gray-600">
                       The minimum amount that can be loaded on the card is $100
                       or equivalent amount in other currency. The maximum amount
@@ -681,7 +682,7 @@ function Index() {
                     </p>
                   </li>
                   <li>
-                    <h5>What steps do I take if my card gets lost?</h5>
+                    <h5  className="text-light">What steps do I take if my card gets lost?</h5>
                     <p className="text-gray-600">
                       If you lose your card please immediately contact our
                       customer support center. If you are in the USA please call
@@ -690,7 +691,7 @@ function Index() {
                     </p>
                   </li>
                   <li>
-                    <h5>Do I have to maintain any minimum balance?</h5>
+                    <h5  className="text-light">Do I have to maintain any minimum balance?</h5>
                     <p className="text-gray-600">
                       It depends on the card you choose. For example, if you
                       pick an Orange Card, you get a special waiver on the
@@ -702,7 +703,7 @@ function Index() {
               <div className="col-sm-6 col-lg-6">
                 <ul className="list-xl wow fadeIn">
                   <li>
-                    <h5>What kind of browser do I need for online banking?</h5>
+                    <h5  className="text-light">What kind of browser do I need for online banking?</h5>
                     <p className="text-gray-600">
                       Our Banking System supports all browsers. Some of the most
                       popular ones are Chrome, Opera, Firefox, and Safari. If
@@ -711,7 +712,7 @@ function Index() {
                     </p>
                   </li>
                   <li>
-                    <h5>Can I make online payments to foreign recipients?</h5>
+                    <h5  className="text-light">Can I make online payments to foreign recipients?</h5>
                     <p className="text-gray-600">
                       Yes, you can! Our bank does not limit any payments to a
                       certain country so whether you are using our online
@@ -721,7 +722,7 @@ function Index() {
                     </p>
                   </li>
                   <li>
-                    <h5>
+                    <h5  className="text-light">
                       What security features does the mobile banking have?
                     </h5>
                     <p className="text-gray-600">
@@ -743,7 +744,7 @@ function Index() {
             <div className="row row-fix justify-content-center text-center">
               <div className="col-md-10 col-lg-8 col-xl-6">
                 <h2 className="custom-title">
-                  <span>Latest Story Tips</span>
+                  <span className="text-dark">Latest Story Tips</span>
                 </h2>
                 <p>
                   Our team regularly publishes articles about banking &
@@ -764,9 +765,9 @@ function Index() {
                         height="240"
                       />
                     </a>
-                    <ul className="list-tags">
+                    <ul className="list-tags bg-blue">
                       <li>
-                        <a className="tag" href="#">
+                        <a className="badge bg-blue" href="#">
                           News
                         </a>
                       </li>
@@ -782,10 +783,10 @@ function Index() {
                           height="72"
                         />
                       </a>
-                      <div className="post-author-name">Martha Ryan</div>
+                      <div className="post-author-name bg-blue">Martha Ryan</div>
                     </div>
-                    <h5 className="post-title">
-                      <a href="#">
+                    <h5 className="text-blue">
+                      <a href="#" className="text-blue">
                         7 Banking Services That Can Save Retirees Money
                       </a>
                     </h5>
@@ -810,7 +811,7 @@ function Index() {
                     </a>
                     <ul className="list-tags">
                       <li>
-                        <a className="tag" href="#">
+                        <a className="badge bg-blue  " href="#">
                           Finance
                         </a>
                       </li>
@@ -828,7 +829,7 @@ function Index() {
                       </a>
                       <div className="post-author-name">Lawrence Kelly</div>
                     </div>
-                    <h5 className="post-title">
+                    <h5 className="text-blue">
                       <a href="#">
                         Stocks Could Surge Another 10% Between Now And 2018
                       </a>
@@ -853,7 +854,7 @@ function Index() {
                     </a>
                     <ul className="list-tags">
                       <li>
-                        <a className="tag" href="#">
+                        <a className="badge bg-blue" href="#">
                           Banks
                         </a>
                       </li>
@@ -871,7 +872,7 @@ function Index() {
                       </a>
                       <div className="post-author-name">John Doe</div>
                     </div>
-                    <h5 className="post-title">
+                    <h5 className="text-blue">
                       <a href="#">
                         Wall Street Analysts Are Nailing It This Year
                       </a>
@@ -887,7 +888,7 @@ function Index() {
             </div>
             <div className="button-wrap-lg text-center">
               <a
-                className="button button-lg button-primary"
+                className="button button-lg bg-blue shadow text-white"
                 href="/login"
                 >
                 Banking Account
@@ -895,7 +896,7 @@ function Index() {
             </div>
           </div>
         </section>
-        <section className="section section-sm bg-primary-gradient context-dark text-center">
+        <section className="section section-sm gradient context-dark text-center">
           <div className="container">
             <div className="row row-20 justify-content-md-center">
               <div className="col-md-9 col-lg-6 col-xxl-7">
@@ -925,7 +926,7 @@ function Index() {
                     </label>
                   </div>
                   <button
-                    className="form-icon-button fa fa-envelope"
+                    className="form-icon-button fa fa-envelope text-blue"
                     type="submit"
                   ></button>
                 </form>
@@ -935,7 +936,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="section footer-1">
+      <footer className="section footer-1 bg-black">
         <div className="container">
           <div className="row row-40 wow fadeIn">
             <div className="col-md-6 col-lg-4">
@@ -1062,7 +1063,7 @@ function Index() {
                     data-constraints="@Required"
                   ></textarea>
                 </div>
-                <button className="button button-primary" type="submit">
+                <button className="button bg-blue" type="submit">
                   Send
                 </button>
               </form>
