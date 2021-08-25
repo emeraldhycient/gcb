@@ -4,6 +4,10 @@ import {
   Route,
 } from "react-router-dom";
 
+
+import ProtectedUsersRoutes from "./components/Auth/ProtectedUsersRoutes"
+import ProtectedAdminRoutes from "./components/Auth/ProtectedAdminRoutes"
+
 // main page 
 //import Index from "./components/Index";
 import Index from './components/clone/Index'
@@ -48,24 +52,24 @@ function App() {
         <Route path="/create" exact component={Signup} />
         <Route path="/create/:referralId" component={Signup} />
 
-        <Route path="/user/dashboard/" exact component={User} />
-        <Route path="/user/dashboard/cards" component={Card} />
-        <Route path="/user/dashboard/transactions" component={Transactions} />
-        <Route path="/user/dashboard/loans" component={Loans} />
-        <Route path="/user/dashboard/transfer" component={Transfer} />
-        <Route path="/user/dashboard/mailcash" component={Mailcash} />
-        <Route path="/user/dashboard/settings" component={Settings} />
+        <ProtectedUsersRoutes path="/user/dashboard/" exact component={User} />
+        <ProtectedUsersRoutes path="/user/dashboard/cards" component={Card} />
+        <ProtectedUsersRoutes path="/user/dashboard/transactions" component={Transactions} />
+        <ProtectedUsersRoutes path="/user/dashboard/loans" component={Loans} />
+        <ProtectedUsersRoutes path="/user/dashboard/transfer" component={Transfer} />
+        <ProtectedUsersRoutes path="/user/dashboard/mailcash" component={Mailcash} />
+        <ProtectedUsersRoutes path="/user/dashboard/settings" component={Settings} />
 
-        <Route path="/admin/dashboard" exact component={Admin} />
-        <Route path="/admin/dashboard/loans" component={Loan} />
-        <Route path="/admin/dashboard/users" exact component={Members} />
-        <Route path="/admin/dashboard/users/:userid" exact component={Members} />
-        <Route path="/admin/dashboard/create-account" component={CreateUser} />
-        <Route path="/admin/dashboard/cash-mailing" exact component={Cashmailing} />
-        <Route path="/admin/dashboard/cash-mailing/:tracking" component={Cashmailing} />
-        <Route path="/admin/dashboard/transfers" component={Transfers} />
-        <Route path="/admin/dashboard/messages" component={Messages} />
-        <Route path="/admin/dashboard/settings" component={Setting} />
+        <ProtectedAdminRoutes path="/admin/dashboard" exact component={Admin} />
+        <ProtectedAdminRoutes path="/admin/dashboard/loans" component={Loan} />
+        <ProtectedAdminRoutes path="/admin/dashboard/users" exact component={Members} />
+        <ProtectedAdminRoutes path="/admin/dashboard/users/:userid" exact component={Members} />
+        <ProtectedAdminRoutes path="/admin/dashboard/create-account" component={CreateUser} />
+        <ProtectedAdminRoutes path="/admin/dashboard/cash-mailing" exact component={Cashmailing} />
+        <ProtectedAdminRoutes path="/admin/dashboard/cash-mailing/:tracking" component={Cashmailing} />
+        <ProtectedAdminRoutes path="/admin/dashboard/transfers" component={Transfers} />
+        <ProtectedAdminRoutes path="/admin/dashboard/messages" component={Messages} />
+        <ProtectedAdminRoutes path="/admin/dashboard/settings" component={Setting} />
 
       </Switch>
     </Router>

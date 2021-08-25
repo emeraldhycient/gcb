@@ -43,7 +43,7 @@ function Accesscode() {
         if (res.data.status == "success") {
           const data = res.data;
           notify(data.message);
-          sessionStorage.setItem("hash", data.data.hash);
+          sessionStorage.setItem("userhash", data.data.hash);
           sessionStorage.setItem("email", data.data.user.email);
           setTimeout(() => {
             history.push("/user/dashboard/");

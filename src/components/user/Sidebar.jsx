@@ -3,6 +3,7 @@ import { Link,useHistory,withRouter } from 'react-router-dom'
 import { useAtom } from "jotai";
 
 import sidebarData from "../Data/user/sidebardata";
+import { logout } from "../Auth/auth";
 
 function Sidebar() {
   const [sidebardata, setsidebardata] = useAtom(sidebarData);
@@ -22,15 +23,6 @@ function Sidebar() {
 
   const history = useHistory();
  
-  const logout =()=>{
-
-      if(window.confirm("are you sure you want to logout")){
-          if(sessionStorage.clear()){
-            window.location.reload();
-          }
-      }
-
-  }
 
  
   return (

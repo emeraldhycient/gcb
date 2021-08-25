@@ -45,7 +45,7 @@ function Login() {
         sessionStorage.setItem("userid", data.data.userid);
         notify(data.message);
         if (res.data.data.isadmin) {
-          sessionStorage.setItem("hash", data.data.hash);
+          sessionStorage.setItem("adminhash", data.data.hash);
           setTimeout(() => {
             history.push("/admin/dashboard/");
           }, 1000);
@@ -54,7 +54,6 @@ function Login() {
             history.push("/access-code");
           }, 1000);
         }
-        console.log(res);
       })
       .catch((err) => {
         notify(err.response.data.message);
