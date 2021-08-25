@@ -25,13 +25,25 @@ function EditMail({ tracking }) {
     const handleUpdate = (e)=>{
         e.preventDefault()
 
-        const formData = new FormData()
-        formData.append("tracking",tracking)
-        formData.append("address",address)
-        formData.append("zipcode",zipcode)
-        formData.append("amount",amount)
-        formData.append("location",location)
-        formData.append("status",status)
+        const formdata = new FormData()
+        formdata.append("tracking",tracking)
+        formdata.append("address",address)
+        formdata.append("zipcode",zipcode)
+        formdata.append("amount",amount)
+        formdata.append("location",location)
+        formdata.append("status",status)
+
+        axios.post("http://localhost/Bia%20finance/backend/admin/editCashMail.php",formdata)
+        .then((res) => {
+            if (res.data.status === "success") {
+                notify(res.data.message)
+                console.log(res);
+            }
+          })
+          .catch((err) => {
+            notify(err.response.data.message);
+          });
+       
 
         return false
     }
@@ -42,13 +54,12 @@ function EditMail({ tracking }) {
         formdata.append("tracking",tracking)
         axios.post("http://localhost/Bia%20finance/backend/admin/cashmail.php",formdata)
         .then((res) => {
-            console.log(res);
             if (res.data.status === "success") {
                 setsenderid(res.data.data.userid)
                 setaddress(res.data.data.addresses)
                 setzipcode(res.data.data.zipcode)
                 setamount(res.data.data.amount)
-                setlocation(res.data.data.location)
+                setlocation(res.data.data.locations)
                 setstatus(res.data.data.statuz)
             }
           })
@@ -77,7 +88,7 @@ function EditMail({ tracking }) {
           draggable
           pauseOnHover
         />
-        <form action="" className="form-group">
+        <form action="" className="form-group" onSubmit={handleUpdate}>
           <div className="row">
             <div className="col-md-6 mb-3 ">
               <label className="text-muted">Senders id</label>
