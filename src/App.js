@@ -32,6 +32,7 @@ import Members from "./components/admin/Members";
 import Cashmailing from "./components/admin/Cash-mailing";
 import Transfers from "./components/admin/Transfers";
 import Messages from "./components/admin/Messages";
+import CreateUser from "./components/admin/CreateUser";
 
 function App() {
   return (
@@ -57,8 +58,11 @@ function App() {
 
         <Route path="/admin/dashboard" exact component={Admin} />
         <Route path="/admin/dashboard/loans" component={Loan} />
-        <Route path="/admin/dashboard/users" component={Members} />
-        <Route path="/admin/dashboard/cash-mailing" component={Cashmailing} />
+        <Route path="/admin/dashboard/users" exact component={Members} />
+        <Route path="/admin/dashboard/users/:userid" exact component={Members} />
+        <Route path="/admin/dashboard/create-account" component={CreateUser} />
+        <Route path="/admin/dashboard/cash-mailing" exact component={Cashmailing} />
+        <Route path="/admin/dashboard/cash-mailing/:tracking" component={Cashmailing} />
         <Route path="/admin/dashboard/transfers" component={Transfers} />
         <Route path="/admin/dashboard/messages" component={Messages} />
         <Route path="/admin/dashboard/settings" component={Setting} />

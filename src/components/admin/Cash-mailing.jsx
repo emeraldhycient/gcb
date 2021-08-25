@@ -1,117 +1,157 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import Layout from './Layout'
+import EditMail from "./EditMail";
+import Layout from "./Layout";
 
 function Cashmailing() {
+  const notify = (message) =>
+    toast(`🦄 ${message}`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
-    const EditMail = () => (
-        <div className="col-md-10  shadow rounded ml-auto mr-auto mt-3 mb-5 p-3">
+  const { tracking } = useParams();
+
+  const [cashmails, setcashmails] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost/Bia%20finance/backend/admin/cashmails.php")
+      .then((res) => {
+        if (res.data.status === "success") {
+          const val = Object.values(res.data.data);
+          setcashmails(val);
+        }
+      })
+      .catch((err) => {
+        notify(err.response.data.message);
+      });
+  }, []);
+
+  return (
+    <div>
+      <Layout>
+        <div className="row mt-3 mb-3">
+          {tracking ? <EditMail tracking={tracking}/> : ""}
+
+          <br />
+          <br />
+          <br />
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+
+          <div className="col-md-10  shadow rounded m-auto p-3">
             <div className="mb-4">
-                <h1 className="text-light" style={{ fontSize: '15px' }}>Edit Mail</h1>
+              <h1 className="text-light" style={{ fontSize: "15px" }}>
+                Mailed cash
+              </h1>
             </div>
-            <form action="" className="form-group">
-                <div className="row">
-                    <div className="col-md-6 mb-3 ">
-                        <label className="text-muted">Senders Name</label>
-                        <input type="text" className="form-control bg-dark text-light" placeholder="" />
-                    </div>
-                    <div className="col-md-6 mb-3 ">
-                        <label className="text-muted">Receivers address</label>
-                        <input type="text" className="form-control bg-dark text-light" placeholder="" />
-                    </div>
-                    <div className="col-md-6 mb-3 ">
-                        <label className="text-muted">Zip code</label>
-                        <input type="text" className="form-control bg-dark text-light" placeholder="" />
-                    </div>
-                    <div className="col-md-6 mb-3 ">
-                        <label className="text-muted">Amount</label>
-                        <input type="number" className="form-control bg-dark text-light" placeholder="" />
-                    </div>
-                    <div className="col-md-6 mb-3 ">
-                        <label className="text-muted">Location</label>
-                        <input type="text" className="form-control bg-dark text-light" placeholder="" />
-                    </div>
+            <div className="table-responsive">
+              <table className="table">
 
-                    <div className="col-md-6 mb-3 ">
-                        <label className="text-muted">Status</label>
-                        <select className="form-control">
-                            <option value="Intransit">In transit</option>
-                            <option value="onHold">on Hold</option>
-                            <option value="Canceled">Canceled</option>
-                        </select>
-                    </div>
-
-                </div>
-                <button type="submit" className="btn bg-blue float-right"><i className="fa fa-wrench"></i> UpDate</button>
-            </form>
+                <tbody>
+                  
+                <tr>
+                  <td>
+                    <small>S/N</small>
+                  </td>
+                  <td>
+                    <small>Senders Id</small>
+                  </td>
+                  <td>
+                    <small>Tracking</small>
+                  </td>
+                  <td>
+                    <small>Recpient Address</small>
+                  </td>
+                  <td>
+                    <small>Zip Code</small>
+                  </td>
+                  <td>
+                    <small>Amount</small>
+                  </td>
+                  <td>
+                    <small>Location</small>
+                  </td>
+                  <td>
+                    <small>Status</small>
+                  </td>
+                  <td>
+                    <small>Date</small>
+                  </td>
+                  <td>
+                    <small>Actions</small>
+                  </td>
+                </tr>
+                  {cashmails ? (
+                    cashmails.map((cashmail, i) => (
+                      <tr key={i}>
+                        <td>{i}</td>
+                        <td>
+                          <small>{cashmail.userid}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.tracking}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.addresses}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.zipcode}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.amount}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.locations}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.statuz}</small>
+                        </td>
+                        <td>
+                          <small>{cashmail.createdAt}</small>
+                        </td>
+                        <td>
+                          <Link
+                            to={`/admin/dashboard/cash-mailing/${cashmail.tracking}`}
+                            className="badge badge-primary"
+                          >
+                            Edit
+                          </Link>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td>no mailing has been initiated</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-    )
-
-    return (
-        <div>
-            <Layout>
-                <div className="row mt-3 mb-3">
-
-                    {/* <EditMail /> */}
-
-                    <br />
-                    <br />
-                    <br />
-
-                    <div className="col-md-10  shadow rounded m-auto p-3">
-                        <div className="mb-4">
-                            <h1 className="text-light" style={{ fontSize: '15px' }}>Mailed cash</h1>
-                        </div>
-                        <div className="table-responsive">
-                            <table className="table">
-                                <tr>
-                                    <td><small>Sender</small></td>
-                                    <td><small>Recpient Address</small></td>
-                                    <td><small>Zip Code</small></td>
-                                    <td><small>Amount</small></td>
-                                    <td><small>Location</small></td>
-                                    <td><small>Status</small></td>
-                                    <td><small>Date</small></td>
-                                    <td><small>Actions</small></td>
-                                </tr>
-                                <tr>
-                                    <td><small>j p morgan rose</small></td>
-                                    <td><small>4 st rose avenue 234 washingon</small></td>
-                                    <td><small>1021</small></td>
-                                    <td><small>$ 15000</small></td>
-                                    <td><small>brazil</small></td>
-                                    <td><small>in transit</small></td>
-                                    <td><small>06/21</small></td>
-                                    <td><Link to={`/admin/dashboard/cash-mailing/12wew2ws`} className="badge badge-primary">Edit</Link></td>
-                                </tr>
-                                <tr>
-                                    <td><small>j p morgan rose</small></td>
-                                    <td><small>4 st rose avenue 234 washingon</small></td>
-                                    <td><small>1021</small></td>
-                                    <td><small>$ 15000</small></td>
-                                    <td><small>brazil</small></td>
-                                    <td><small>Canceled</small></td>
-                                    <td><small>06/21</small></td>
-                                    <td><Link to={`/admin/dashboard/cash-mailing/12wew2ws`} className="badge badge-primary">Edit</Link></td>
-                                </tr>
-                                <tr>
-                                    <td><small>j p morgan rose</small></td>
-                                    <td><small>4 st rose avenue 234 washingon</small></td>
-                                    <td><small>1021</small></td>
-                                    <td><small>$ 15000</small></td>
-                                    <td><small>brazil</small></td>
-                                    <td><small>onhold</small></td>
-                                    <td><small>06/21</small></td>
-                                    <td><Link to={`/admin/dashboard/cash-mailing/12wew2ws`} className="badge badge-primary">Edit</Link></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </Layout>
-        </div>
-    )
+      </Layout>
+    </div>
+  );
 }
 
-export default Cashmailing
+export default Cashmailing;

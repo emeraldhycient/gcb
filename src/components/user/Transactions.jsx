@@ -66,6 +66,7 @@ function Transactions() {
               <table className="table text-dark">
                 <tbody>
                   <tr>
+                    <td><small>trans ref</small></td>
                     <td>
                       <small>method</small>
                     </td>
@@ -84,7 +85,7 @@ function Transactions() {
                         <tr key={i}>
                             <td>{transaction.tx_ref}</td>
                           <td>
-                            <small>bank transfer</small>
+                            <small>online banking</small>
                           </td>
                           <td>
                             <small className="badge badge-info bg-blue">

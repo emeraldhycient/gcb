@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Layout from "./Layout";
 import Cardmaker from "../cardmaker/Cardmaker";
 import DoughnutChart from "../Charts/Doughnut ";
-import Modal from "../common/Modal/Modal";
 
 function User() {
   const notify = (message) =>
@@ -33,7 +32,6 @@ function User() {
   const [totalexpenses, settotalexpenses] = useState("");
   const [transactions, settransactions] = useState("");
 
-  const [email, setemail] = useState("");
 
   const getTransactions = () => {
     const formdata = new FormData();
@@ -85,7 +83,6 @@ function User() {
         setfullname(res.data.data.fullname);
         setaccountnumber(res.data.data.accoutnumber);
         setacctbalance(res.data.data.accountbalance);
-        setemail(res.data.data.email)
       })
       .catch((err) => {
         notify(err.response.data.message);

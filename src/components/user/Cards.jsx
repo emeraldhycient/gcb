@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Layout from "./Layout";
 import Cardmaker from "../cardmaker/Cardmaker";
 import carddatas from "../Data/user/carddatas";
-import Modal from "../common/Modal/Modal";
 import { Link } from "react-router-dom";
 
 function Card() {
@@ -34,7 +33,6 @@ function Card() {
   const [accountnumber, setaccountnumber] = useState("");
   const [acctbalance, setacctbalance] = useState("");
 
-  const [email, setemail] = useState("");
 
  
 
@@ -52,7 +50,6 @@ function Card() {
         setfullname(res.data.data.fullname);
         setaccountnumber(res.data.data.accoutnumber);
         setacctbalance(res.data.data.accountbalance);
-        setemail(res.data.data.email);
       })
       .catch((err) => {
         notify(err.response.data.message);
@@ -77,6 +74,17 @@ function Card() {
                   >
                     Main Account
                   </h6>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                  />
                   <div className="">
                     <h5 className="text-light mt-3 mb-0 text-capitalize">
                       {fullname}
