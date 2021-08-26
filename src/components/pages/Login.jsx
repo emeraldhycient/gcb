@@ -37,7 +37,7 @@ function Login() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/auth/login.php",
+      url: "https://api.biafinancebank.com/auth/login.php",
       data: formdata,
     })
       .then((res) => {

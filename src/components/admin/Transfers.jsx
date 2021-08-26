@@ -19,8 +19,10 @@ function Transfers() {
   const [transactions, settransactions] = useState([]);
 
   const getTransactions = () => {
+    const formdata = new FormData();
+    formdata.append("transactions", "transactions");
     axios
-      .get("http://localhost/Bia%20finance/backend/admin/transactions.php")
+      .post("https://api.biafinancebank.com/admin/Transactions.php",formdata)
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data);

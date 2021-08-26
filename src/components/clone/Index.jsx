@@ -9,14 +9,12 @@ import "./assets/font-awesome.css"*/
 
 import Header from "../common/Header";
 import logo from "../images/biafinancebank-logo/vector/default-monochrome-white.svg";
-import card from "../images/creditcard1.png";
 
 function Index() {
   return (
     <div>
       <main className="main">
         <Header />
-        <div id="conveythis-wrapper-main"><a href="https://www.conveythis.com" class="conveythis-no-translate notranslate" title="ConveyThis" >ConveyThis</a></div>
         <section
           className="section swiper-container swiper-slider swiper-slider-1 mySwiper bg-light-black"
           data-loop="true"
@@ -31,6 +29,7 @@ function Index() {
                   <div className="row">
                     <div className="col-md-10 col-lg-7">
                       <h1
+                      className="wow slideInLeft"
                         data-caption-animate="fadeInUp"
                         data-caption-delay="100"
                       >

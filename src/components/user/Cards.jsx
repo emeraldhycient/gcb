@@ -42,7 +42,7 @@ function Card() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/user/userdetails.php",
+      url: "https://api.biafinancebank.com/user/userdetails.php",
       data: formdata,
     })
       .then((res) => {
@@ -122,7 +122,7 @@ function Card() {
               cvc={cvc}
               expiry={expiry}
               focus={focus}
-              name={name}
+              name={fullname}
               number={number}
             />
           </div>

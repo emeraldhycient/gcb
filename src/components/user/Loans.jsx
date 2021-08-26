@@ -29,7 +29,7 @@ function Loans() {
                             <table className="table text-dark">
                                 <tbody>
 
-                                    <tr>
+                                  {/*  <tr>
                                         <td><small>method</small></td>
                                         <td><small>Purpose</small></td>
                                         <td><small>Amount</small></td>
@@ -52,7 +52,7 @@ function Loans() {
                                         <td><small className="badge badge-info bg-blue">car repair</small></td>
                                         <td><small>$ +15000</small></td>
                                         <td><small>06/21</small></td>
-                                    </tr>
+                                  </tr>*/}
 
 
                                 </tbody>

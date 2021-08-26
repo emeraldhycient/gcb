@@ -24,7 +24,7 @@ function Transactions() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/user/transactions.php",
+      url: "https://api.biafinancebank.com/user/transactions.php",
       data: formdata,
     })
       .then((res) => {

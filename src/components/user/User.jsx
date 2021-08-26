@@ -39,7 +39,7 @@ function User() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/user/transactions.php",
+      url: "https://api.biafinancebank.com/user/transactions.php",
       data: formdata,
     })
       .then((res) => {
@@ -58,7 +58,7 @@ function User() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/user/totalexpenses.php",
+      url: "https://api.biafinancebank.com/user/totalexpenses.php",
       data: formdata,
     })
       .then((res) => {
@@ -75,7 +75,7 @@ function User() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/user/userdetails.php",
+      url: "https://api.biafinancebank.com/user/userdetails.php",
       data: formdata,
     })
       .then((res) => {

@@ -33,11 +33,10 @@ function EditMail({ tracking }) {
         formdata.append("location",location)
         formdata.append("status",status)
 
-        axios.post("http://localhost/Bia%20finance/backend/admin/editCashMail.php",formdata)
+        axios.post("https://api.biafinancebank.com/admin/editCashMail.php",formdata)
         .then((res) => {
             if (res.data.status === "success") {
                 notify(res.data.message)
-                console.log(res);
             }
           })
           .catch((err) => {
@@ -52,7 +51,7 @@ function EditMail({ tracking }) {
 
         const formdata = new FormData()
         formdata.append("tracking",tracking)
-        axios.post("http://localhost/Bia%20finance/backend/admin/cashmail.php",formdata)
+        axios.post("https://api.biafinancebank.com/admin/cashMail.php",formdata)
         .then((res) => {
             if (res.data.status === "success") {
                 setsenderid(res.data.data.userid)

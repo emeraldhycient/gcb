@@ -1,5 +1,5 @@
 import React from "react";
-import { Link,useHistory,withRouter } from 'react-router-dom'
+import { Link,withRouter } from 'react-router-dom'
 import { useAtom } from "jotai";
 
 import sidebarData from "../Data/user/sidebardata";
@@ -20,9 +20,6 @@ function Sidebar() {
       })
     );
   };
-
-  const history = useHistory();
- 
 
  
   return (

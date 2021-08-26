@@ -45,7 +45,7 @@ function CreateUser() {
     
         axios({
           method: "POST",
-          url:"http://localhost/Bia%20finance/backend/auth/createaccount.php",
+          url:"https://api.biafinancebank.com/auth/createaccount.php",
           data: formdata,
         })
           .then((res) => {

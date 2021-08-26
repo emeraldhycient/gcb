@@ -36,7 +36,7 @@ function Accesscode() {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/auth/verifycode.php",
+      url: "https://api.biafinancebank.com/auth/verifycode.php",
       data: formdata,
     })
       .then((res) => {

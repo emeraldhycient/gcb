@@ -22,9 +22,9 @@ function EditUser({ userid }) {
   const [address, setaddress] = useState("");
   const [dob, setdob] = useState("");
   const [pin, setpin] = useState("");
-  const [password, setpassword] = useState("");
-  const [isadmin, setisadmin] = useState("");
+  const [isadmin, setisadmin] = useState(false);
   const [accountbalance, setaccountbalance] = useState("");
+  const [password,setpassword] = useState("");
 
   const updateAccount = (e) => {
     e.preventDefault();
@@ -44,7 +44,7 @@ function EditUser({ userid }) {
 
     axios({
       method: "POST",
-      url: "http://localhost/Bia%20finance/backend/admin/updateUser.php",
+      url: "https://api.biafinancebank.com/admin/updateUser.php",
       data: formdata,
     })
       .then((res) => {
@@ -62,7 +62,7 @@ function EditUser({ userid }) {
     formdata.append("userid", userid);
     axios
       .post(
-        "http://localhost/Bia%20finance/backend/admin/getUser.php",
+        "https://api.biafinancebank.com/admin/getUser.php",
         formdata
       )
       .then((res) => {

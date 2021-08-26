@@ -18,6 +18,7 @@ import Cards from "./components/pages/Cards";
 import Login from "./components/pages/Login";
 import Accesscode from "./components/pages/Accesscode";
 import Signup from "./components/pages/Signup";
+import Tracking from "./components/pages/Tracking";
 
 //user dashboard
 import User from "./components/user/User";
@@ -51,6 +52,8 @@ function App() {
         <Route path="/access-code" component={Accesscode} />
         <Route path="/create" exact component={Signup} />
         <Route path="/create/:referralId" component={Signup} />
+        <Route path="/tracking" component={Tracking} />
+
 
         <ProtectedUsersRoutes path="/user/dashboard/" exact component={User} />
         <ProtectedUsersRoutes path="/user/dashboard/cards" component={Card} />
