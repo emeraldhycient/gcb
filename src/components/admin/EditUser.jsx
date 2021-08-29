@@ -44,7 +44,7 @@ function EditUser({ userid }) {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/admin/updateUser.php",
+      url: "https://api.biafinance.org/admin/updateUser.php",
       data: formdata,
     })
       .then((res) => {
@@ -62,7 +62,7 @@ function EditUser({ userid }) {
     formdata.append("userid", userid);
     axios
       .post(
-        "https://api.biafinancebank.com/admin/getUser.php",
+        "https://api.biafinance.org/admin/getUser.php",
         formdata
       )
       .then((res) => {

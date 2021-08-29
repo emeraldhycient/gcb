@@ -22,7 +22,7 @@ function Transfers() {
     const formdata = new FormData();
     formdata.append("transactions", "transactions");
     axios
-      .post("https://api.biafinancebank.com/admin/Transactions.php",formdata)
+      .post("https://api.biafinance.org/admin/Transactions.php",formdata)
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data);

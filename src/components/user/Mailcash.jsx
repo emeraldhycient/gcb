@@ -36,7 +36,7 @@ function Mailcash() {
   
       axios({
         method: "POST",
-        url: "https://api.biafinancebank.com/user/cashmailing.php",
+        url: "https://api.biafinance.org/user/cashmailing.php",
         data: formdata,
       })
         .then((res) => {
@@ -57,7 +57,7 @@ function Mailcash() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/auth/requestOtp.php",
+      url: "https://api.biafinance.org/auth/requestOtp.php",
       data: formdata,
     })
       .then((res) => {

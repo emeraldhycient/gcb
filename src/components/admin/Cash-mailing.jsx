@@ -25,7 +25,7 @@ function Cashmailing() {
 
   useEffect(() => {
     axios
-      .get("https://api.biafinancebank.com/admin/cashMails.php")
+      .get("https://api.biafinance.org/admin/cashMails.php")
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data);

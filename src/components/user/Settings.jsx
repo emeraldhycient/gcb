@@ -38,7 +38,7 @@ function Settings() {
     
         axios({
           method: "POST",
-          url:"https://api.biafinancebank.com/auth/updateDetails.php",
+          url:"https://api.biafinance.org/auth/updateDetails.php",
           data: formdata,
         })
           .then((res) => {
@@ -57,7 +57,7 @@ function Settings() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/user/userdetails.php",
+      url: "https://api.biafinance.org/user/userdetails.php",
       data: formdata,
     })
       .then((res) => {

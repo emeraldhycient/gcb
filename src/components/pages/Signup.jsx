@@ -51,7 +51,7 @@ function Signup() {
     
         axios({
           method: "POST",
-          url:"https://api.biafinancebank.com/auth/createaccount.php",
+          url:"https://api.biafinance.org/auth/createaccount.php",
           data: formdata,
         })
           .then((res) => {

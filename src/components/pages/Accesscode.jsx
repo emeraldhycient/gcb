@@ -36,7 +36,7 @@ function Accesscode() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/auth/verifycode.php",
+      url: "https://api.biafinance.org/auth/verifycode.php",
       data: formdata,
     })
       .then((res) => {
@@ -88,6 +88,7 @@ function Accesscode() {
                     placeholder="Enter your pin "
                     className="form-control no-border ml-2 mr-2"
                     style={{ fontFamily: "sans-serif" }}
+                    value={pin}
                     onChange={(e) => setpin(e.target.value)}
                   />
                   <i

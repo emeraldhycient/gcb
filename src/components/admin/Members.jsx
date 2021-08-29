@@ -25,7 +25,7 @@ function Members() {
 
   const getMembers = () => {
     axios
-      .get("https://api.biafinancebank.com/admin/users.php")
+      .get("https://api.biafinance.org/admin/users.php")
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data.users);
@@ -42,7 +42,7 @@ function Members() {
   const handleDelete = id => {
     const formdata = new FormData()
     formdata.append("userid",id)
-    axios.post("https://api.biafinancebank.com/admin/deleteUser.php",formdata)
+    axios.post("https://api.biafinance.org/admin/deleteUser.php",formdata)
         .then((res) => {
             notify(res.data.message)
             setTimeout(() => {

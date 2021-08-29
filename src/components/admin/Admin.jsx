@@ -27,7 +27,7 @@ function Admin() {
     const formdata = new FormData();
     formdata.append("totaluser", "totaluser");
     axios({
-      url: "https://api.biafinancebank.com/admin/totalUser.php",
+      url: "https://api.biafinance.org/admin/totalUser.php",
       method: "POST",
       data: formdata,
     })
@@ -45,7 +45,7 @@ function Admin() {
     const formdata = new FormData();
     formdata.append("totalTransfer", "totalTransfer");
     axios({
-      url: "https://api.biafinancebank.com/admin/totalTransfers.php",
+      url: "https://api.biafinance.org/admin/totalTransfers.php",
       method: "POST",
       data: formdata,
     })
@@ -63,7 +63,7 @@ function Admin() {
     const formdata = new FormData();
     formdata.append("transactions", "transactions");
     axios
-      .post("https://api.biafinancebank.com/admin/Transactions.php",formdata)
+      .post("https://api.biafinance.org/admin/Transactions.php",formdata)
       .then((res) => {
           if(res.data.status === "success"){
               const val = Object.values(res.data.data);

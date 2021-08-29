@@ -39,7 +39,7 @@ function Transfer() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/user/transfers.php",
+      url: "https://api.biafinance.org/user/transfers.php",
       data: formdata,
     })
       .then((res) => {
@@ -59,7 +59,7 @@ function Transfer() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/auth/requestOtp.php",
+      url: "https://api.biafinance.org/auth/requestOtp.php",
       data: formdata,
     })
       .then((res) => {

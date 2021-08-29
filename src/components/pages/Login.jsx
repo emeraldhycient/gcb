@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link,useHistory } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -37,10 +37,11 @@ function Login() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinancebank.com/auth/login.php",
+      url: "https://api.biafinance.org/auth/login.php",
       data: formdata,
     })
       .then((res) => {
+        console.log(res);
         const data = res.data;
         sessionStorage.setItem("userid", data.data.userid);
         notify(data.message);
@@ -56,11 +57,13 @@ function Login() {
         }
       })
       .catch((err) => {
-        notify(err.response.data.message);
+       notify(err.response.data.message);
+        console.log(err)
       });
-    // history.push("/access-code");
     return false;
   };
+
+  
 
   return (
     <div className="container">
@@ -89,6 +92,7 @@ function Login() {
                 <input
                   type="email"
                   placeholder="Enter Email"
+                  value={email}
                   onChange={(e) => setemail(e.target.value)}
                   id=""
                   className="form-control mb-3 "
@@ -97,6 +101,7 @@ function Login() {
                   <input
                     type={passwordShown ? "text" : "password"}
                     placeholder="Enter password "
+                    value={password}
                     onChange={(e) => setpassword(e.target.value)}
                     className="form-control no-border ml-2 mr-2"
                     style={{ fontFamily: "sans-serif" }}

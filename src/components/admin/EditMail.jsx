@@ -20,6 +20,12 @@ function EditMail({ tracking }) {
     const [zipcode, setzipcode] = useState("")
     const [amount, setamount] = useState("")
     const [location, setlocation] = useState("")
+    const [detail1, setdetail1] = useState("")
+    const [detail2, setdetail2] = useState("")
+    const [detail3, setdetail3] = useState("")
+    const [detail4, setdetail4] = useState("")
+    const [detail5, setdetail5] = useState("")
+    const [detail6, setdetail6] = useState("")
     const [status, setstatus] = useState("")
 
     const handleUpdate = (e)=>{
@@ -31,9 +37,15 @@ function EditMail({ tracking }) {
         formdata.append("zipcode",zipcode)
         formdata.append("amount",amount)
         formdata.append("location",location)
+        formdata.append("detail1",detail1)
+        formdata.append("detail2",detail2)
+        formdata.append("detail3",detail3)
+        formdata.append("detail4",detail4)
+        formdata.append("detail5",detail5)
+        formdata.append("detail6",detail6)
         formdata.append("status",status)
 
-        axios.post("https://api.biafinancebank.com/admin/editCashMail.php",formdata)
+        axios.post("https://api.biafinance.org/admin/editCashMail.php",formdata)
         .then((res) => {
             if (res.data.status === "success") {
                 notify(res.data.message)
@@ -51,7 +63,7 @@ function EditMail({ tracking }) {
 
         const formdata = new FormData()
         formdata.append("tracking",tracking)
-        axios.post("https://api.biafinancebank.com/admin/cashMail.php",formdata)
+        axios.post("https://api.biafinance.org/admin/cashMail.php",formdata)
         .then((res) => {
             if (res.data.status === "success") {
                 setsenderid(res.data.data.userid)
@@ -59,6 +71,12 @@ function EditMail({ tracking }) {
                 setzipcode(res.data.data.zipcode)
                 setamount(res.data.data.amount)
                 setlocation(res.data.data.locations)
+                setdetail1(res.data.data.detail1)
+                setdetail2(res.data.data.detail2)
+                setdetail3(res.data.data.detail3)
+                setdetail4(res.data.data.detail4)
+                setdetail5(res.data.data.detail5)
+                setdetail6(res.data.data.detail6)
                 setstatus(res.data.data.statuz)
             }
           })
@@ -132,9 +150,77 @@ function EditMail({ tracking }) {
                 className="form-control bg-dark text-light"
                 placeholder=""
                 value={location} onChange={e=> setlocation(e.target.value)}
-                required
+                
               />
             </div>
+
+            <div className="col-md-6 mb-3 ">
+              <label className="text-muted">Details 1</label>
+              <input
+                type="text"
+                className="form-control bg-dark text-light"
+                placeholder=""
+                value={detail1} onChange={e=> setdetail1(e.target.value)}
+                
+              />
+            </div>
+
+            <div className="col-md-6 mb-3 ">
+              <label className="text-muted">Details 2</label>
+              <input
+                type="text"
+                className="form-control bg-dark text-light"
+                placeholder=""
+                value={detail2} onChange={e=> setdetail2(e.target.value)}
+                
+              />
+            </div>
+
+            <div className="col-md-6 mb-3 ">
+              <label className="text-muted">Details 3</label>
+              <input
+                type="text"
+                className="form-control bg-dark text-light"
+                placeholder=""
+                value={detail3} onChange={e=> setdetail3(e.target.value)}
+                
+              />
+            </div>
+
+            <div className="col-md-6 mb-3 ">
+              <label className="text-muted">Details 4</label>
+              <input
+                type="text"
+                className="form-control bg-dark text-light"
+                placeholder=""
+                value={detail4} onChange={e=> setdetail4(e.target.value)}
+                
+              />
+            </div>
+
+            <div className="col-md-6 mb-3 ">
+              <label className="text-muted">Details 5</label>
+              <input
+                type="text"
+                className="form-control bg-dark text-light"
+                placeholder=""
+                value={detail5} onChange={e=> setdetail5(e.target.value)}
+                
+              />
+            </div>
+
+            <div className="col-md-6 mb-3 ">
+              <label className="text-muted">Details 6</label>
+              <input
+                type="text"
+                className="form-control bg-dark text-light"
+                placeholder=""
+                value={detail6} onChange={e=> setdetail6(e.target.value)}
+                
+              />
+            </div>
+
+            
 
             <div className="col-md-6 mb-3 ">
               <label className="text-muted">Status</label>

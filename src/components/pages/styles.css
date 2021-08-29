@@ -10,6 +10,29 @@
     background-color: #091018;
 }
 
+.lines-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circled {
+    background-color: #cacaca;
+    /*   background-color: #042958;*/
+    width: 13px;
+    height: 13px;
+    border-radius: 100000px;
+    border: 1px solid #9b9b9b;
+}
+
+.lines {
+    height: 20px;
+    width: 3px;
+    background-color: #cacaca;
+    border: 1px solid #9b9b9b;
+}
+
 @media only screen and (max-width: 760px) {
     #logopane {
         display: none;
