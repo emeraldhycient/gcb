@@ -41,8 +41,8 @@ function Contact() {
                             </form>
                             <div className="bg-dark p-2">
                                 <h6 className="text-light mb-2"><i className="fa fa-home bg-light text-dark rounded p-2 mr-2"></i>7 Bis Avenue de la Paix 1202 Geneva, Switzerland</h6>
-                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:Contact@biafinancebank.com" className="text-light"> Contact@biafinance.org</a></h6>
-                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:info@biafinancebank.com" className="text-light"> info@biafinance.org</a></h6>
+                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:Contact@biafinance.org" className="text-light"> Contact@biafinance.org</a></h6>
+                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:info@biafinance.org" className="text-light"> info@biafinance.org</a></h6>
                             </div>
                         </div>
                     </div>

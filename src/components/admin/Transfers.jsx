@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import Layout from "./Layout";
+import MakeTransfer from "./MakeTransfer";
 
 function Transfers() {
   const notify = (message) =>
@@ -22,7 +24,7 @@ function Transfers() {
     const formdata = new FormData();
     formdata.append("transactions", "transactions");
     axios
-      .post("https://api.biafinance.org/admin/Transactions.php",formdata)
+      .post("https://api.biafinance.org/admin/Transactions.php", formdata)
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data);
@@ -41,6 +43,7 @@ function Transfers() {
   return (
     <div>
       <Layout>
+        <MakeTransfer />
         <div className="col-md-10 shadow rounded m-auto p-3">
           <div className="mb-4">
             <h6 className="text-light" style={{ fontSize: "15px" }}>
