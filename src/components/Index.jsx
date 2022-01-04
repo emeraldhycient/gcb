@@ -21,6 +21,7 @@ function Index() {
                 <section className="" style={{ marginTop: '150px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <div className="container text-white m-sm-0 m-xs-0">
                         <div className="col-md-7 col-lg-7 col-sm-12 col-xs-12 mr-auto ml-md-5 ml-lg-5 ml-sm-4">
+                            <div id="google_translate_element"></div>
                             <h1 className="my-4" style={{ fontWeight: 'bolder' }}>THE FASTEST ONLINE BANKING FOR YOUR DAILY NEEDS.</h1>
                             <p style={{ letterSpacing: "0.7px", fontFamily: 'Palatino Linotype', lineHeight: '30px' }}>Bia finance bank is your goto partner for your next movie ticket,groceries,travel or that holiday you have always wanted.shop freely and get 2% cashback on every expenses.</p>
                             <div className="mt-5">

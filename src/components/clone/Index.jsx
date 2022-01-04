@@ -28,6 +28,7 @@ function Index() {
                 <div className="container">
                   <div className="row">
                     <div className="col-md-10 col-lg-7">
+                    <div id="google_translate_element"></div>
                       <h1
                       className="wow slideInLeft"
                         data-caption-animate="fadeInUp"

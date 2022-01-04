@@ -46,7 +46,6 @@ function Card() {
       data: formdata,
     })
       .then((res) => {
-        notify(res.data.message);
         setfullname(res.data.data.fullname);
         setaccountnumber(res.data.data.accoutnumber);
         setacctbalance(res.data.data.accountbalance);

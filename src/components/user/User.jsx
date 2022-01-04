@@ -20,10 +20,10 @@ function User() {
       progress: undefined,
     });
 
-  const [cvc, ] = useState("231");
-  const [expiry, ] = useState("12/22");
-  const [focus, ] = useState("number");
-  const [number, ] = useState("5110 1212 2323 3454");
+  const [cvc] = useState("231");
+  const [expiry] = useState("12/22");
+  const [focus] = useState("number");
+  const [number] = useState("5110 1212 2323 3454");
 
   const [fullname, setfullname] = useState("");
   const [accountnumber, setaccountnumber] = useState("");
@@ -31,7 +31,6 @@ function User() {
 
   const [totalexpenses, settotalexpenses] = useState("");
   const [transactions, settransactions] = useState("");
-
 
   const getTransactions = () => {
     const formdata = new FormData();
@@ -48,7 +47,7 @@ function User() {
         settransactions(val);
       })
       .catch((err) => {
-        notify(err.response.data.message);
+        console.log(err.response.data.message);
       });
   };
 
@@ -79,7 +78,6 @@ function User() {
       data: formdata,
     })
       .then((res) => {
-        notify(res.data.message);
         setfullname(res.data.data.fullname);
         setaccountnumber(res.data.data.accoutnumber);
         setacctbalance(res.data.data.accountbalance);
@@ -135,7 +133,7 @@ function User() {
                       </div>
                       <div className="">
                         <h6 className="text-blue ml-1">
-                          {acctbalance.toLocaleString()}
+                         ${acctbalance.toLocaleString()}
                         </h6>
                         <small className="text-muted">Income</small>
                       </div>
@@ -148,7 +146,7 @@ function User() {
                       </div>
                       <div className="">
                         <h6 className="text-blue ml-1">
-                          {totalexpenses ? totalexpenses.toLocaleString() : 0}
+                         ${totalexpenses ? totalexpenses.toLocaleString() : 0}
                         </h6>
                         <small className="text-muted">Expenses</small>
                       </div>
@@ -164,16 +162,31 @@ function User() {
                     Available Fund
                   </h6>
                   <h3 className="mt-3 text-blue">
-                    {" "}
-                    {acctbalance.toLocaleString()}
+                    ${acctbalance.toLocaleString()}
                   </h3>
-                  <button
-                    className="btn mt-4 bg-blue"
-                  >
-                    <Link to="/user/dashboard/transfer">
-                    <i className="fa fa-share-alt-square mr-1"></i> Transfer
-                    </Link>
-                  </button>
+                  <div class="dropdown">
+                    <button
+                      class="btn mt-4 bg-blue dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i className="fa fa-share-alt-square mr-1"></i> Transfer
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="/user/dashboard/transfer/local">
+                        Local Transfer (0.5 %)
+                      </a>
+                      <a class="dropdown-item" href="/user/dashboard/transfer/international">
+                        International Transfer (1%)
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -210,27 +223,29 @@ function User() {
                                     <th><small>Date</small></th>
                                 </thead> */}
                 <tbody>
-                  {transactions
-                    ? transactions.map((transaction, i) => (
-                        <tr key={i}>
-                            <td>{transaction.tx_ref}</td>
-                          <td>
-                            <small>bank transfer</small>
-                          </td>
-                          <td>
-                            <small className="badge badge-info bg-blue">
-                              {transaction.purpose}
-                            </small>
-                          </td>
-                          <td>
-                            <small>-${transaction.amount}</small>
-                          </td>
-                          <td>
-                            <small>{transaction.createdAt}</small>
-                          </td>
-                        </tr>
-                      ))
-                    : <tr> no transactions found</tr>}
+                  {transactions ? (
+                    transactions.map((transaction, i) => (
+                      <tr key={i}>
+                        <td>{transaction.tx_ref}</td>
+                        <td>
+                          <small>bank transfer</small>
+                        </td>
+                        <td>
+                          <small className="badge badge-info bg-blue">
+                            {transaction.purpose}
+                          </small>
+                        </td>
+                        <td>
+                          <small>-${transaction.amount}</small>
+                        </td>
+                        <td>
+                          <small>{transaction.createdAt}</small>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr> no transactions found</tr>
+                  )}
                 </tbody>
               </table>
             </div>

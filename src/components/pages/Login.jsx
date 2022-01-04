@@ -41,18 +41,20 @@ function Login() {
       data: formdata,
     })
       .then((res) => {
-        console.log(res);
         const data = res.data;
         sessionStorage.setItem("userid", data.data.userid);
-        notify(data.message);
         if (res.data.data.isadmin) {
+          notify(data.message);
           sessionStorage.setItem("adminhash", data.data.hash);
           setTimeout(() => {
             history.push("/admin/dashboard/");
           }, 1000);
         } else {
+          notify(data.message);
+          sessionStorage.setItem("userhash", data.data.hash);
+          sessionStorage.setItem("email", data.data.email);
           setTimeout(() => {
-            history.push("/access-code");
+            history.push("/user/dashboard");
           }, 1000);
         }
       })

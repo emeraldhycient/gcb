@@ -59,7 +59,7 @@ function App() {
         <ProtectedUsersRoutes path="/user/dashboard/cards" component={Card} />
         <ProtectedUsersRoutes path="/user/dashboard/transactions" component={Transactions} />
         <ProtectedUsersRoutes path="/user/dashboard/loans" component={Loans} />
-        <ProtectedUsersRoutes path="/user/dashboard/transfer" component={Transfer} />
+        <ProtectedUsersRoutes path="/user/dashboard/transfer/:transfertype" component={Transfer} />
         <ProtectedUsersRoutes path="/user/dashboard/mailcash" component={Mailcash} />
         <ProtectedUsersRoutes path="/user/dashboard/settings" component={Settings} />
 
