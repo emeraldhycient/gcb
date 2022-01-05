@@ -90,11 +90,29 @@ function Card() {
                     </h5>
                     <small className="text-muted">{accountnumber}</small>
                   </div>
-                  <button className="btn bg-blue mt-4">
-                    <Link to="/user/dashboard/mailcash">
+                  <div class="dropdown">
+                    <button
+                      class="btn mt-4 bg-blue dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
                       <i className="fa fa-paper-plane mr-1"></i> Cash Mailing
-                    </Link>
-                  </button>
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="/user/dashboard/mailcash/local">
+                        Local Cash Mailing (0.5 %)
+                      </a>
+                      <a class="dropdown-item" href="/user/dashboard/mailcash/international">
+                        International Cash Mailing (2%)
+                      </a>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-md-1 mb-5"></div>
                 <div className="col-md-3">
@@ -105,7 +123,7 @@ function Card() {
                     Available Fund
                   </h6>
                   <h3 className="mt-3 text-blue">
-                    {" "}
+                    $
                     {acctbalance.toLocaleString()}
                   </h3>
                   <button className="btn bg-blue mt-4">

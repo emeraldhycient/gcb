@@ -104,7 +104,7 @@ function Transfer() {
 
   function randomString(length) {
 		var result           = '';
-		var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+=-';
+		var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890987654321564738392910';
 		var charactersLength = characters.length;
 		for ( var i = 0; i < length; i++ ) {
 		   result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -132,7 +132,7 @@ function Transfer() {
               <h6 className="text-warning">
                 {transfertype === "local"
                   ? "All local transfer attracts 0.5% charges"
-                  : "All international transfer attracts 1% charges"}
+                  : "All international transfer attracts 2% charges"}
               </h6>
             </div>
             <form className="form-group" onSubmit={handleTransfer}>

@@ -183,7 +183,7 @@ function User() {
                         Local Transfer (0.5 %)
                       </a>
                       <a class="dropdown-item" href="/user/dashboard/transfer/international">
-                        International Transfer (1%)
+                        International Transfer (2%)
                       </a>
                     </div>
                   </div>
