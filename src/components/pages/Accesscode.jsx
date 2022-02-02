@@ -36,7 +36,7 @@ function Accesscode() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinance.org/auth/verifycode.php",
+      url: "https://base.guaranteedcapita.com/auth/verifycode.php",
       data: formdata,
     })
       .then((res) => {

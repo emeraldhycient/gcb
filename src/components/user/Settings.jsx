@@ -38,7 +38,7 @@ function Settings() {
     
         axios({
           method: "POST",
-          url:"https://api.biafinance.org/auth/updateDetails.php",
+          url:"https://base.guaranteedcapita.com/auth/updateDetails.php",
           data: formdata,
         })
           .then((res) => {
@@ -57,7 +57,7 @@ function Settings() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinance.org/user/userdetails.php",
+      url: "https://base.guaranteedcapita.com/user/userdetails.php",
       data: formdata,
     })
       .then((res) => {
@@ -85,7 +85,7 @@ function Settings() {
         <h4 className="mx-5 my-4 text-blue">Edit Profile and Settings</h4>
         <div className="container">
           <div className="row">
-            <div className="col-md-10  rounded pt-3 m-auto shadow">
+            <div className="col-md-10  rounded pt-3 m-auto card">
               <h4 className="text-blue">Profile</h4>
               <ToastContainer
                 position="top-center"
@@ -104,16 +104,8 @@ function Settings() {
                     <input
                       type="text"
                       name=""
-                      id="user"
-                      className="form-control form-control-lg bg-dark"
-                    />
-                  </div>
-                  <div className="col-md-6 mb-4">
-                    <input
-                      type="text"
-                      name=""
                       id="full"
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                       value={fullname}
                       onChange={e=> setfullname(e.target.value)}
                     />
@@ -125,7 +117,7 @@ function Settings() {
                       id="email"
                       value={email}
                       onChange={e=> setemail(e.target.value)}
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   <div className="col-md-6 mb-4">
@@ -135,7 +127,7 @@ function Settings() {
                       id="country"
                       value={country}
                       onChange={e=> setcountry(e.target.value)}
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   <div className="col-md-6 mb-4">
@@ -145,7 +137,7 @@ function Settings() {
                       id="state"
                       value={state}
                       onChange={e=> setstate(e.target.value)}
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   <div className="col-md-6 mb-4">
@@ -155,7 +147,7 @@ function Settings() {
                       id="add"
                       value={address}
                       onChange={e=> setaddress(e.target.value)}
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   <div className="col-md-6 mb-4">
@@ -165,7 +157,7 @@ function Settings() {
                       id="dob"
                       value={dob}
                       onChange={e=> setdob(e.target.value)}
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg "
                     />
                   </div>
                   <div className="col-md-6 mb-4 mt-4">
@@ -187,7 +179,7 @@ function Settings() {
                       name=""
                       id="new"
                       placeholder="current password"
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg "
                     />
                   </div>
                   <div className="col-md-6 mb-4">
@@ -196,7 +188,7 @@ function Settings() {
                       name=""
                       id="old"
                       placeholder="new password"
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   </div>
@@ -219,7 +211,7 @@ function Settings() {
                       name=""
                       id="newpin"
                       placeholder="current pin"
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   <div className="col-md-6 mb-4">
@@ -228,7 +220,7 @@ function Settings() {
                       name=""
                       id="oldpin"
                       placeholder="new pin"
-                      className="form-control form-control-lg bg-dark"
+                      className="form-control form-control-lg"
                     />
                   </div>
                   </div>

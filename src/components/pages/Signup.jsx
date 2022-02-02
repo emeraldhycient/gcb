@@ -51,7 +51,7 @@ function Signup() {
     
         axios({
           method: "POST",
-          url:"https://api.biafinance.org/auth/createaccount.php",
+          url:"https://base.guaranteedcapita.com/auth/createaccount.php",
           data: formdata,
         })
           .then((res) => {

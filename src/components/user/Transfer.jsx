@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Layout from "./Layout";
 
 import "./modalstyle.css";
-import logo from "../images/biafinancebank-logo/vector/default-monochrome-black.svg";
+import logo from "../images/GCB-logo/vector/default-monochrome-black.svg";
 
 function Transfer() {
   const { transfertype } = useParams();
@@ -47,7 +47,7 @@ function Transfer() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinance.org/user/transfers.php",
+      url: "https://base.guaranteedcapita.com/user/transfers.php",
       data: formdata,
     })
       .then((res) => {
@@ -70,7 +70,7 @@ function Transfer() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinance.org/auth/requestOtp.php",
+      url: "https://base.guaranteedcapita.com/auth/requestOtp.php",
       data: formdata,
     })
       .then((res) => {
@@ -292,7 +292,7 @@ function Transfer() {
                       className="text-dark"
                       style={{ fontSize: 16, fontWeight: "bold" }}
                     >
-                      Bia-{randomString(16)}
+                    GCB-{randomString(16)}
                     </h5>
                   </div>
                   <div className="d-flex justify-content-between mb-3">

@@ -25,7 +25,7 @@ function Members() {
 
   const getMembers = () => {
     axios
-      .get("https://api.biafinance.org/admin/users.php")
+      .get("https://base.guaranteedcapita.com/admin/users.php")
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data.users);
@@ -42,7 +42,7 @@ function Members() {
   const handleDelete = id => {
     const formdata = new FormData()
     formdata.append("userid",id)
-    axios.post("https://api.biafinance.org/admin/deleteUser.php",formdata)
+    axios.post("https://base.guaranteedcapita.com/admin/deleteUser.php",formdata)
         .then((res) => {
             notify(res.data.message)
             setTimeout(() => {
@@ -79,14 +79,14 @@ function Members() {
             pauseOnHover
           />
 
-          <div className="col-md-11  shadow rounded m-auto p-3">
+          <div className="col-md-11  card rounded m-auto p-3">
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h6 className="text-light" style={{ fontSize: "15px" }}>
+              <h6 className="text-dark" style={{ fontSize: "15px" }}>
                 Members
               </h6>
               <button className="btn bg-blue btn-sm">
-                  <Link to="/admin/dashboard/create-account">
-                <i className="fa fa-plus text-white"></i> Create account
+                  <Link to="/admin/dashboard/create-account" className="text-light">
+                <i className="fa fa-plus text-light"></i> Create account
                   </Link>
               </button>
             </div>

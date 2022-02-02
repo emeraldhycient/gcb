@@ -44,7 +44,7 @@ function EditUser({ userid }) {
 
     axios({
       method: "POST",
-      url: "https://api.biafinance.org/admin/updateUser.php",
+      url: "https://base.guaranteedcapita.com/admin/updateUser.php",
       data: formdata,
     })
       .then((res) => {
@@ -62,7 +62,7 @@ function EditUser({ userid }) {
     formdata.append("userid", userid);
     axios
       .post(
-        "https://api.biafinance.org/admin/getUser.php",
+        "https://base.guaranteedcapita.com/admin/getUser.php",
         formdata
       )
       .then((res) => {
@@ -98,9 +98,9 @@ function EditUser({ userid }) {
         pauseOnHover
       />
 
-      <div className="col-md-11  shadow rounded ml-auto mr-auto mt-3 mb-5 p-3">
+      <div className="col-md-11  card rounded ml-auto mr-auto mt-3 mb-5 p-3">
         <div className="mb-4">
-          <h1 className="text-light" style={{ fontSize: "15px" }}>
+          <h1 className="text-dark" style={{ fontSize: "15px" }}>
             Edit user
           </h1>
         </div>

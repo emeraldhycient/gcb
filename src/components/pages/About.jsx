@@ -34,14 +34,14 @@ function About() {
                         <div className="col-md-6 col-lg-6 col-sm-8">
                             <div className="my-5">
                                 <h5>
-                                    BIAFINANCE BANK is the leading financial establishment providing high-quality international banking services. Our success is attributed to our loyal customers and to the talent and dedication of our professional and skilled employees. We are always ready to partner with you by offering full financial support to our clients worldwide.
+                                Guaranteed Capital Bank  is the leading financial establishment providing high-quality international banking services. Our success is attributed to our loyal customers and to the talent and dedication of our professional and skilled employees. We are always ready to partner with you by offering full financial support to our clients worldwide.
                                 </h5>
                                 <small className="text-muted">We provide all our clients with various advantages that not only satisfy their banking needs but also allow them to get more without overpaying for banking service.</small>
                             </div>
                             <div className="bg-dark p-2">
                                 <h6 className="text-light mb-2"><i className="fa fa-home bg-light text-dark rounded p-2 mr-2"></i>7 Bis Avenue de la Paix 1202 Geneva, Switzerland</h6>
-                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:Contact@biafinancebank.com" className="text-light"> Contact@biafinancebank.com</a></h6>
-                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:info@biafinancebank.com" className="text-light"> info@biafinancebank.com</a></h6>
+                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:Contact@GuaranteedCapital.com" className="text-light"> Contact@GuaranteedCapital.com</a></h6>
+                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:info@GuaranteedCapital.com" className="text-light"> info@GuaranteedCapital.com</a></h6>
                             </div>
                         </div>
                     </div>

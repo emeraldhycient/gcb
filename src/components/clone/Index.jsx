@@ -8,7 +8,7 @@ import "./assets/style.css"
 import "./assets/font-awesome.css"*/
 
 import Header from "../common/Header";
-import logo from "../images/biafinancebank-logo/vector/default-monochrome-white.svg";
+import logo from "../images/GCB-logo/vector/default-monochrome-white.svg";
 
 function Index() {
   return (

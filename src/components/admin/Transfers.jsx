@@ -24,7 +24,7 @@ function Transfers() {
     const formdata = new FormData();
     formdata.append("transactions", "transactions");
     axios
-      .post("https://api.biafinance.org/admin/Transactions.php", formdata)
+      .post("https://base.guaranteedcapita.com/admin/Transactions.php", formdata)
       .then((res) => {
         if (res.data.status === "success") {
           const val = Object.values(res.data.data);
@@ -44,9 +44,9 @@ function Transfers() {
     <div>
       <Layout>
         <MakeTransfer />
-        <div className="col-md-10 shadow rounded m-auto p-3">
+        <div className="col-md-10 card rounded m-auto p-3">
           <div className="mb-4">
-            <h6 className="text-light" style={{ fontSize: "15px" }}>
+            <h6 className="text-dark" style={{ fontSize: "15px" }}>
               All transactions
             </h6>
             <ToastContainer
@@ -75,10 +75,10 @@ function Transfers() {
                 {transactions ? (
                   transactions.map((transaction, i) => (
                     <tr key={i}>
-                      <td>{transaction.userid}</td>
-                      <td>{transaction.tx_ref}</td>
+                      <td className="text-dark">{transaction.userid}</td>
+                      <td className="text-dark">{transaction.tx_ref}</td>
                       <td>
-                        <small>online banking</small>
+                        <small className="text-dark">online banking</small>
                       </td>
                       <td>
                         <small className="badge badge-info bg-blue">
@@ -86,16 +86,16 @@ function Transfers() {
                         </small>
                       </td>
                       <td>
-                        <small>${transaction.amount}</small>
+                        <small className="text-dark">${transaction.amount}</small>
                       </td>
                       <td>
-                        <small>{transaction.createdAt}</small>
+                        <small className="text-dark">{transaction.createdAt}</small>
                       </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td>No Data Found</td>
+                    <td className="text-dark">No Data Found</td>
                   </tr>
                 )}
               </tbody>

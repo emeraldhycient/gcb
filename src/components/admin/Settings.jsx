@@ -8,7 +8,7 @@ function Setting() {
                 <h4 className="mx-5 my-4 text-blue">Edit Settings</h4>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-10  rounded pt-3 m-auto shadow">
+                        <div className="col-md-10  rounded pt-3 m-auto card">
 
                             <h4 className="my-3 text-blue">Security</h4>
                             <form action="" className="form-group">

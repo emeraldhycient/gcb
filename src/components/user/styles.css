@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: none;
+    background-color: #fafafa;
     display: flex;
 }
 
@@ -32,7 +32,7 @@
     width: 88%;
     height: 100vh;
     overflow-y: scroll;
-    background-color: #222e3a;
+    background-color: #fafafa;
     color: #23153c;
 }
 
@@ -69,4 +69,14 @@ td {
 .bg-blue {
     background-color: #3943fe;
     color: #fafafa
+}
+
+.profile {
+    height: 70px;
+    width: 70px;
+    background-color: #fafafa;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

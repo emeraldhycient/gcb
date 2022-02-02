@@ -7,8 +7,8 @@ function Loans() {
         <div>
             <Layout>
                 <div className="row mt-4 mb-5">
-                    <div className="col-md-10 m-auto shadow rounded pt-3">
-                        <h6 className="text-light mb-3 ml-2">Checks Loan Eligibility</h6>
+                    <div className="col-md-10 m-auto card rounded pt-3">
+                        <h6 className="text-dark mb-3 ml-2">Checks Loan Eligibility</h6>
                         <form action="" className="form-inline">
                             <div className="input-group mb-3 col">
                                 <div className="input-group-prepend">
@@ -21,7 +21,7 @@ function Loans() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-10 m-auto shadow rounded pt-3">
+                    <div className="col-md-10 m-auto card rounded pt-3">
                         <div className="table-responsive">
                             <div className="d-flex justify-content-between align-items-center">
                                 <h5 className="text-blue mb-3 ml-2">Previous Loans</h5>

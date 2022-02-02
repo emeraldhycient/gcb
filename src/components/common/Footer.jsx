@@ -62,7 +62,7 @@ function Footer() {
             </div>
             <div className="bg-light mt-3 offset-2 mb-2">
                 <i className="fa fa-copyright text-muted mr-2"></i>
-                <span className="text-muted" style={{ fontFamily: 'sans-serif' }}>biafinancebank {y}</span>
+                <span className="text-muted" style={{ fontFamily: 'sans-serif' }}>Guaranteed Capital Bank {y}</span>
             </div>
         </div>
     )

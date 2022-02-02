@@ -9,8 +9,8 @@ import ProtectedUsersRoutes from "./components/Auth/ProtectedUsersRoutes"
 import ProtectedAdminRoutes from "./components/Auth/ProtectedAdminRoutes"
 
 // main page 
-//import Index from "./components/Index";
-import Index from './components/clone/Index'
+import Index from "./components/Index";
+//import Index from './components/clone/Index'
 import Services from "./components/pages/Services";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";

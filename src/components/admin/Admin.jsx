@@ -27,7 +27,7 @@ function Admin() {
     const formdata = new FormData();
     formdata.append("totaluser", "totaluser");
     axios({
-      url: "https://api.biafinance.org/admin/totalUser.php",
+      url: "https://base.guaranteedcapita.com/admin/totalUser.php",
       method: "POST",
       data: formdata,
     })
@@ -45,7 +45,7 @@ function Admin() {
     const formdata = new FormData();
     formdata.append("totalTransfer", "totalTransfer");
     axios({
-      url: "https://api.biafinance.org/admin/totalTransfers.php",
+      url: "https://base.guaranteedcapita.com/admin/totalTransfers.php",
       method: "POST",
       data: formdata,
     })
@@ -63,7 +63,7 @@ function Admin() {
     const formdata = new FormData();
     formdata.append("transactions", "transactions");
     axios
-      .post("https://api.biafinance.org/admin/Transactions.php",formdata)
+      .post("https://base.guaranteedcapita.com/admin/Transactions.php",formdata)
       .then((res) => {
           if(res.data.status === "success"){
               const val = Object.values(res.data.data);
@@ -86,13 +86,13 @@ function Admin() {
     <div>
       <Layout>
         <div className="row mt-3">
-          <div className="col-md-5 mt-5 mb-5 mr-auto ml-auto shadow ">
+          <div className="col-md-5 mt-1 mb-3 mr-auto ml-auto card " style={{backgroundColor:"#fafafa"}}>
             <div className="row">
               <div className="col-md-3 bg-blue d-flex justify-content-center align-items-center">
                 <i className="fa fa-users fa-4x"></i>
               </div>
               <div className="col-md-9 text-center p-3">
-                <h3 className="text-light mb-2">Users</h3>
+                <h3 className="text-dark mb-2">Users</h3>
                 <hr className="text-danger" />
                 <h2 className="text-blue">{totalUsers}</h2>
               </div>
@@ -109,23 +109,23 @@ function Admin() {
             draggable
             pauseOnHover
           />
-          <div className="col-md-5 mt-5 mb-5 mr-auto ml-auto shadow ">
+          <div className="col-md-5 mt-1 mb-3 mr-auto ml-auto card " style={{backgroundColor:"#fafafa"}}>
             <div className="row">
               <div className="col-md-3 bg-blue d-flex justify-content-center align-items-center">
                 <i className="fa fa-paper-plane fa-4x"></i>
               </div>
               <div className="col-md-9 text-center p-3">
-                <h3 className="text-light mb-2">Transfers</h3>
+                <h3 className="text-dark mb-2">Transfers</h3>
                 <hr className="text-danger" />
                 <h2 className="text-blue">{totalTransfer}</h2>
               </div>
             </div>
           </div>
         </div>
-        <div className="row mt-3">
-          <div className="col-md-7 shadow rounded mb-3 p-3">
+        <div className="row mt-2">
+          <div className="col-md-7 card rounded mb-3 p-3">
             <div className="d-flex justify-content-between align-items-center">
-              <h6 className="text-light" style={{ fontSize: "15px" }}>
+              <h6 className="text-dark" style={{ fontSize: "15px" }}>
                 Latest transactions
               </h6>
               <button className="btn bg-blue btn-sm">
@@ -148,30 +148,30 @@ function Admin() {
                                         {
                                             transactions ? transactions.map((transaction,i)=>(
 
-                                                <tr>
-                                                    <td>{transaction.userid}</td>
-                                                    <td>{transaction.tx_ref}</td>
+                                                <tr className="text-dark">
+                                                    <td className="text-dark">{transaction.userid}</td>
+                                                    <td className="text-dark">{transaction.tx_ref}</td>
                                                 <td>
-                                                  <small>online banking</small>
+                                                  <small className="text-dark">online banking</small>
                                                 </td>
                                                 <td>
                                                   <small className="badge badge-info bg-blue">{transaction.purpose}</small>
                                                 </td>
                                                 <td>
-                                                  <small>${transaction.amount}</small>
+                                                  <small className="text-dark">${transaction.amount}</small>
                                                 </td>
                                                 <td>
-                                                  <small>{transaction.createdAt}</small>
+                                                  <small className="text-dark">{transaction.createdAt}</small>
                                                 </td>
                                               </tr>
-                                            )) : <tr><td>No Data Found</td></tr>
+                                            )) : <tr><td className="text-dark">No Data Found</td></tr>
                                         }
                                 </tbody>              
               </table>
             </div>
           </div>
           <div className="col-md-1"></div>
-          <div className="col-md-4 shadow rounded mb-3 p-3">
+          <div className="col-md-4 card rounded mb-3 p-3">
             <div className="d-flex justify-content-between align-items-center">
               <h6 className="text-info" style={{ fontSize: "15px" }}>
                 Cash Flow

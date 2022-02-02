@@ -45,7 +45,7 @@ function EditMail({ tracking }) {
         formdata.append("detail6",detail6)
         formdata.append("status",status)
 
-        axios.post("https://api.biafinance.org/admin/editCashMail.php",formdata)
+        axios.post("https://base.guaranteedcapita.com/admin/editCashMail.php",formdata)
         .then((res) => {
             if (res.data.status === "success") {
                 notify(res.data.message)
@@ -63,7 +63,7 @@ function EditMail({ tracking }) {
 
         const formdata = new FormData()
         formdata.append("tracking",tracking)
-        axios.post("https://api.biafinance.org/admin/cashMail.php",formdata)
+        axios.post("https://base.guaranteedcapita.com/admin/cashMail.php",formdata)
         .then((res) => {
             if (res.data.status === "success") {
                 setsenderid(res.data.data.userid)
@@ -88,9 +88,9 @@ function EditMail({ tracking }) {
 
   return (
     <div>
-      <div className="col-md-10  shadow rounded ml-auto mr-auto mt-3 mb-5 px-3 pt-3 pb-5">
+      <div className="col-md-10  card rounded ml-auto mr-auto mt-3 mb-5 px-3 pt-3 pb-5">
         <div className="mb-4">
-          <h1 className="text-light" style={{ fontSize: "15px" }}>
+          <h1 className="text-dark" style={{ fontSize: "15px" }}>
             Edit Mail
           </h1>
         </div>

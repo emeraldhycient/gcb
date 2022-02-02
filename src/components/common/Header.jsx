@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 import "./styles.css"
-import logo from "../images/biafinancebank-logo/vector/default-monochrome-white.svg"
+import logo from "../images/GCB-logo/vector/default-monochrome-white.svg"
 
 function Header() {
     return (
@@ -12,7 +12,7 @@ function Header() {
                 <i className="fa fa-bars text-white" style={{ fontSize: 30 }}></i>
             </button>
             <a className="navbar-brand" href="/">
-                <img src={logo} style={{ width: '200px', height: '35px' }} alt="bia finance bank logo" />
+                <img src={logo} style={{ width: '200px', height: '35px' }} alt="GCB logo" />
             </a>
 
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">

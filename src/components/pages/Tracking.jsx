@@ -29,7 +29,7 @@ function Tracking() {
     const formdata = new FormData();
     formdata.append("tracking", tracking);
     axios
-      .post("https://api.biafinance.org/user/tracking.php", formdata)
+      .post("https://base.guaranteedcapita.com/user/tracking.php", formdata)
       .then((res) => {
         if (res.data.status === "success") {
           console.log(res);

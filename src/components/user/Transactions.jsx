@@ -24,7 +24,7 @@ function Transactions() {
 
     axios({
       method: "POST",
-      url: "https://api.biafinance.org/user/transactions.php",
+      url: "https://base.guaranteedcapita.com/user/transactions.php",
       data: formdata,
     })
       .then((res) => {
@@ -44,7 +44,7 @@ function Transactions() {
     <>
       <Layout>
         <div className="row">
-          <div className="col-md-10 m-auto shadow rounded pt-5">
+          <div className="col-md-10 m-auto card rounded pt-5">
             <div className="table-responsive">
               <div className="d-flex justify-content-between align-items-center">
                 <h5 className="text-blue mb-3 ml-2">All transactions</h5>
@@ -66,26 +66,26 @@ function Transactions() {
               <table className="table text-dark">
                 <tbody>
                   <tr>
-                    <td><small>trans ref</small></td>
+                    <td><small className="text-dark">trans ref</small></td>
                     <td>
-                      <small>method</small>
+                      <small className="text-dark">method</small>
                     </td>
                     <td>
-                      <small>Purpose</small>
+                      <small className="text-dark">Purpose</small>
                     </td>
                     <td>
-                      <small>Amount</small>
+                      <small className="text-dark">Amount</small>
                     </td>
                     <td>
-                      <small>Date</small>
+                      <small className="text-dark">Date</small>
                     </td>
                   </tr>
                   {transactions
                     ? transactions.map((transaction, i) => (
                         <tr key={i}>
-                            <td>{transaction.tx_ref}</td>
+                            <td className="text-dark">{transaction.tx_ref}</td>
                           <td>
-                            <small>online banking</small>
+                            <small className="text-dark">online banking</small>
                           </td>
                           <td>
                             <small className="badge badge-info bg-blue">
@@ -93,14 +93,14 @@ function Transactions() {
                             </small>
                           </td>
                           <td>
-                            <small>-${transaction.amount}</small>
+                            <small className="text-dark">-${transaction.amount}</small>
                           </td>
                           <td>
-                            <small>{transaction.createdAt}</small>
+                            <small className="text-dark">{transaction.createdAt}</small>
                           </td>
                         </tr>
                       ))
-                    : <tr> no transactions found</tr>}
+                    : <tr className="text-dark"> no transactions found</tr>}
                 </tbody>
               </table>
             </div>

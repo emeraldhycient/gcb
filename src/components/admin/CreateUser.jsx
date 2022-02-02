@@ -45,7 +45,7 @@ function CreateUser() {
     
         axios({
           method: "POST",
-          url:"https://api.biafinance.org/auth/createaccount.php",
+          url:"https://base.guaranteedcapita.com/auth/createaccount.php",
           data: formdata,
         })
           .then((res) => {
@@ -63,7 +63,7 @@ function CreateUser() {
   return (
     <div>
       <Layout>
-        <div className="col-md-11  shadow rounded ml-auto mr-auto mt-3 mb-5 p-3">
+        <div className="col-md-11  card rounded ml-auto mr-auto mt-3 mb-5 p-3">
           <div className="mb-4">
             <ToastContainer
               position="top-center"
@@ -77,7 +77,7 @@ function CreateUser() {
               pauseOnHover
             />
 
-            <h1 className="text-light" style={{ fontSize: "15px" }}>
+            <h1 className="text-dark" style={{ fontSize: "15px" }}>
               create account
             </h1>
           </div>
