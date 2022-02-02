@@ -40,8 +40,8 @@ function About() {
                             </div>
                             <div className="bg-dark p-2">
                                 <h6 className="text-light mb-2"><i className="fa fa-home bg-light text-dark rounded p-2 mr-2"></i>7 Bis Avenue de la Paix 1202 Geneva, Switzerland</h6>
-                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:Contact@GuaranteedCapital.com" className="text-light"> Contact@GuaranteedCapital.com</a></h6>
-                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:info@GuaranteedCapital.com" className="text-light"> info@GuaranteedCapital.com</a></h6>
+                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:Contact@guaranteedcapita.com" className="text-light"> Contact@guaranteedcapita.com</a></h6>
+                                <h6><i className="fa fa-envelope text-danger bg-light rounded p-2 mr-2"></i><a href="mailto:info@guaranteedcapita.com" className="text-light"> info@guaranteedcapita.com</a></h6>
                             </div>
                         </div>
                     </div>
