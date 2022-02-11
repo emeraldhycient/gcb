@@ -128,7 +128,7 @@ function User() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 d-none d-lg-block d-md-block">
                 <div className="d-flex  align-items-center justify-content-around">
                   <div className=" mt-2">
                     <h6
@@ -141,7 +141,7 @@ function User() {
                       ${acctbalance.toLocaleString()}
                     </h3>
                   </div>
-                  <div className="ml-3 mt-2">
+                  <div className="ml-3 mt-2 ">
                     <div class="dropdown">
                       <button
                         class="btn mb-2 bg-blue dropdown-toggle"
@@ -207,6 +207,84 @@ function User() {
             </div>
           </div>
         </div>
+
+        <div className="col-md-7 card rounded mb-3 d-md-none d-lg-none">
+          <div className="container py-3">
+            <div className="row">
+              <div className="col-md-8">
+                <div className=" mt-2">
+                  <h6
+                    className=""
+                    style={{ color: "#cacaca", fontSize: "12px" }}
+                  >
+                    Available Fund
+                  </h6>
+                  <h3 className="text-dark">${acctbalance.toLocaleString()}</h3>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn mb-2 bg-blue dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i className="fa fa-share-alt-square mr-1"></i> Transfer
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      href="/user/dashboard/transfer/local"
+                    >
+                      Local Transfer (0.5 %)
+                    </a>
+                    <a
+                      class="dropdown-item"
+                      href="/user/dashboard/transfer/international"
+                    >
+                      International Transfer (2%)
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button
+                    class="btn  bg-blue dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i className="fa fa-paper-plane mr-1"></i> Cash Mailing
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      class="dropdown-item"
+                      href="/user/dashboard/mailcash/local"
+                    >
+                      Local Cash Mailing (0.5 %)
+                    </a>
+                    <a
+                      class="dropdown-item"
+                      href="/user/dashboard/mailcash/international"
+                    >
+                      International Cash Mailing (2%)
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="col-md-7 card rounded mb-3">
           <div className="container py-3">
             <div className="row">
