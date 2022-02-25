@@ -15,11 +15,10 @@ import downloadiphone from "./images/downloadiphone.png";
 import Netbackground from "./common/Netbackground";
 
 function Index() {
-
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-      }, []);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -43,10 +42,13 @@ function Index() {
           <div className="container text-white m-sm-0 m-xs-0">
             <div className="col-md-7 col-lg-7 col-sm-12 col-xs-12 mr-auto ml-md-5 ml-lg-5 ml-sm-4">
               <div id="google_translate_element"></div>
-              <h1 className="my-4" style={{ fontWeight: "bolder" }} 
-              data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <h1
+                className="my-4"
+                style={{ fontWeight: "bolder" }}
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 THE FASTEST ONLINE BANKING FOR YOUR DAILY NEEDS.
               </h1>
               <p
@@ -63,15 +65,26 @@ function Index() {
                 ticket,groceries,travel or that holiday you have always
                 wanted.shop freely and get 2% cashback on every expenses.
               </p>
-              <div className="mt-5"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
-                <button className="btn btn-success btn-lg">
+              <div
+                className="mt-5"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
+                <button className="btn btn-success mr-2">
                   <Link
                     to="/create"
                     style={{ textDecoration: "none", color: "#fafafa" }}
                   >
                     CREATE AN ACCOUNT
+                  </Link>
+                </button>
+                <button className="btn btn-info">
+                  <Link
+                    to="/login"
+                    style={{ textDecoration: "none", color: "#fafafa" }}
+                  >
+                    LOGIN TO ACCOUNT
                   </Link>
                 </button>
               </div>
@@ -88,13 +101,21 @@ function Index() {
         }}
       >
         <center>
-          <h2 className="h2"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">EASY STEPS TO GET STARTED</h2>
+          <h2
+            className="h2"
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
+            EASY STEPS TO GET STARTED
+          </h2>
           <div className="m-4 shortbar"></div>
-          <div className="col-md-6"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+          <div
+            className="col-md-6"
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <h6 className="p" style={{ marginBottom: "70px" }}>
               Following these simple steps highlighted below guaranties you
               would enjoy banking with us. if at any stage you need assistance ,
@@ -105,18 +126,24 @@ function Index() {
         <div className="container mx-auto">
           <div className="row">
             <div className="col-md-4">
-              <div className="circle"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <div
+                className="circle"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <img
                   src="https://img.icons8.com/fluent/48/000000/euro-bank-building.png"
                   alt=" create account icon"
                 />
               </div>
               <h5 className="my-3 text-white">CREATE AN ACCOUNT</h5>
-              <h6 className="mb-4 p"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <h6
+                className="mb-4 p"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 Scroll down and locate the create an account button. click on it
                 and it would take you to the page where you can create your
                 account. accounts such personal savings account,Fixed deposit
@@ -124,18 +151,24 @@ function Index() {
               </h6>
             </div>
             <div className="col-md-4">
-              <div className="circle"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <div
+                className="circle"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <img
                   src="https://img.icons8.com/fluent/48/000000/bank-cards.png"
                   alt="request for an atm card icon "
                 />
               </div>
               <h5 className="my-3 text-white">REQUEST FOR AN ATM CARD</h5>
-              <h6 className="p mb-4"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <h6
+                className="p mb-4"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 After Your Account has been created you would be directed to
                 your account page.Locate this icon{" "}
                 <i className="fa fa-credit-card text-success"></i>, Click on it
@@ -144,18 +177,24 @@ function Index() {
               </h6>
             </div>
             <div className="col-md-4">
-              <div className="circle"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <div
+                className="circle"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <img
                   src="https://img.icons8.com/fluent/48/000000/request-money.png"
                   alt="deposit money into your account icon "
                 />
               </div>
               <h5 className="my-3 text-white">FUND YOUR ACCOUNT</h5>
-              <h6 className="p mb-4 "               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <h6
+                className="p mb-4 "
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 We Have Several Options which enables you to fund and spend from
                 your account,methods like direct cryptocurrency{" "}
                 <i className="fa fa-bitcoin text-warning"></i> deposit to your
@@ -178,9 +217,12 @@ function Index() {
         <br />
         <div className="container mt-5">
           <div className="row">
-            <div className="col-md-4"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+            <div
+              className="col-md-4"
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <center>
                 <img
                   src="https://img.icons8.com/fluent/48/000000/investment-portfolio.png"
@@ -196,9 +238,12 @@ function Index() {
                 </h6>
               </center>
             </div>
-            <div className="col-md-4"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+            <div
+              className="col-md-4"
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <center>
                 <img
                   src="https://img.icons8.com/fluent/48/000000/stack-of-coins.png"
@@ -215,9 +260,12 @@ function Index() {
                 </h6>
               </center>
             </div>
-            <div className="col-md-4"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+            <div
+              className="col-md-4"
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <center>
                 <img
                   src="https://img.icons8.com/fluent/48/000000/online-money-transfer.png"
@@ -237,9 +285,12 @@ function Index() {
           </div>
         </div>
         <div className="mt-5 text-center">
-          <button className="btn btn-primary btn-lg"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+          <button
+            className="btn btn-primary btn-lg"
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <Link
               to="/create"
               style={{ textDecoration: "none", color: "#fafafa" }}
@@ -256,9 +307,12 @@ function Index() {
         <div class="container">
           <div class="row">
             <div class="col-md-5 col-sm-6 m-auto pb-5">
-              <div class="progress blue"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <div
+                class="progress blue"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <span class="progress-left">
                   <span class="progress-bar"></span>
                 </span>
@@ -277,9 +331,12 @@ function Index() {
             </div>
 
             <div class="col-md-5 col-sm-6 m-auto pb-5">
-              <div class="progress yellow"               data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <div
+                class="progress yellow"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <span class="progress-left">
                   <span class="progress-bar"></span>
                 </span>
@@ -306,9 +363,14 @@ function Index() {
         <div className="container">
           <div className="row">
             <div className="col-md-4 my-5">
-              <img src={downloadimage} alt="" style={{ width: "100%" }}               data-aos="zoom-in-left"
-     data-aos-easing="linear"
-     data-aos-duration="1000" />
+              <img
+                src={downloadimage}
+                alt=""
+                style={{ width: "100%" }}
+                data-aos="zoom-in-left"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              />
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-7">
@@ -322,9 +384,12 @@ function Index() {
               >
                 Download Our Software, Compatible For All Devices.
               </h1>
-              <h6 className="p my-5 text-muted"               data-aos="zoom-in-right"
-     data-aos-easing="linear"
-     data-aos-duration="1000">
+              <h6
+                className="p my-5 text-muted"
+                data-aos="zoom-in-right"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 Make your life experiences simpler and stay in control with Our
                 Mobile Banking app. Manage your finances; make card settlements,
                 transfer funds and make payments using QR (Quick Response
@@ -346,7 +411,12 @@ function Index() {
               <center>
                 <div className="m-4 shortbar"></div>
               </center>
-              <CountUp start={0} end={inView ? 1752827 :0 }   separator=" "  delay={0}>
+              <CountUp
+                start={0}
+                end={inView ? 1752827 : 0}
+                separator=" "
+                delay={0}
+              >
                 {({ countUpRef }) => (
                   <div>
                     <h1 className="mt-5">
@@ -365,7 +435,12 @@ function Index() {
               <center>
                 <div className="m-4 shortbar"></div>
               </center>
-              <CountUp start={0} end={inView ? 120005287 : 0}   separator=" "  delay={0}>
+              <CountUp
+                start={0}
+                end={inView ? 120005287 : 0}
+                separator=" "
+                delay={0}
+              >
                 {({ countUpRef }) => (
                   <div>
                     <h1 className="mt-5">
@@ -378,14 +453,18 @@ function Index() {
                   </div>
                 )}
               </CountUp>
-             
             </div>
             <div className="col-md-4 mt-5 pt-5 text-center">
               <h3 className="h2 text-white">In Holding</h3>
               <center>
                 <div className="m-4 shortbar"></div>
               </center>
-              <CountUp start={0} end={inView ? 42567533 : 0}   separator=" "  delay={0}>
+              <CountUp
+                start={0}
+                end={inView ? 42567533 : 0}
+                separator=" "
+                delay={0}
+              >
                 {({ countUpRef }) => (
                   <div>
                     <h1 className="mt-5">
@@ -398,7 +477,6 @@ function Index() {
                   </div>
                 )}
               </CountUp>
-             
             </div>
           </div>
           <div className="mt-5 text-center pt-3">
