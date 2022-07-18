@@ -1,5 +1,5 @@
-import React, { useEffect, useState} from "react";
-import { Link, useParams  } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -37,21 +37,39 @@ function Members() {
       });
   };
 
+  const handleDelete = (id) => {
+    const formdata = new FormData();
+    formdata.append("userid", id);
+    axios
+      .post("https://api.biafinance.org/admin/deleteUser.php", formdata)
+      .then((res) => {
+        notify(res.data.message);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      })
+      .catch((err) => {
+        notify(err.response.data.message);
+      });
+  };
 
-
-  const handleDelete = id => {
-    const formdata = new FormData()
-    formdata.append("userid",id)
-    axios.post("https://base.guaranteedcapita.com/admin/deleteUser.php",formdata)
-        .then((res) => {
-            notify(res.data.message)
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000);
-        }).catch((err) => {
-            notify(err.response.data.message)
-        })
-}
+  const blockuser = (id) => {
+    const formdata = new FormData();
+    formdata.append("userid", id);
+    axios
+      .post("https://base.guaranteedcapita.com/admin/blockuser.php", formdata)
+      .then((res) => {
+        notify(res.data.message);
+        console.log(res);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      })
+      .catch((err) => {
+        notify(err.response.data.message);
+        console.log(err.response.data);
+      });
+  };
 
   useEffect(() => {
     getMembers();
@@ -79,15 +97,15 @@ function Members() {
             pauseOnHover
           />
 
-          <div className="col-md-11  card rounded m-auto p-3">
+          <div className="col-md-11  shadow rounded m-auto p-3">
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h6 className="text-dark" style={{ fontSize: "15px" }}>
+              <h6 className="text-light" style={{ fontSize: "15px" }}>
                 Members
               </h6>
               <button className="btn bg-blue btn-sm">
-                  <Link to="/admin/dashboard/create-account" className="text-light">
-                <i className="fa fa-plus text-light"></i> Create account
-                  </Link>
+                <Link to="/admin/dashboard/create-account">
+                  <i className="fa fa-plus text-white"></i> Create account
+                </Link>
               </button>
             </div>
             <div className="table-responsive bg-dark">
@@ -131,6 +149,9 @@ function Members() {
                       <small>isAdmin</small>
                     </td>
                     <td>
+                      <small>status</small>
+                    </td>
+                    <td>
                       <small>Joined On</small>
                     </td>
                     <td className="text-blue">
@@ -138,6 +159,9 @@ function Members() {
                     </td>
                     <td className="text-danger">
                       Delete <i className="fa fa-trash text-danger"></i>
+                    </td>
+                    <td className="text-danger">
+                      Un/Block <i className="fa fa-times text-danger"></i>
                     </td>
                   </tr>
 
@@ -181,6 +205,9 @@ function Members() {
                           <small>{user.isadmin}</small>
                         </td>
                         <td>
+                          <small>{user.status}</small>
+                        </td>
+                        <td>
                           <small>{user.createdAt}</small>
                         </td>
                         <td>
@@ -191,8 +218,11 @@ function Members() {
                             Edit
                           </Link>
                         </td>
-                        <td onClick={e=> handleDelete(user.userid)}>
+                        <td onClick={(e) => handleDelete(user.userid)}>
                           <span className="badge badge-danger">Delete</span>
+                        </td>
+                        <td onClick={(e) => blockuser(user.userid)}>
+                          <span className="badge badge-danger">block user</span>
                         </td>
                       </tr>
                     ))
