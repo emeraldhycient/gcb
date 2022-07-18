@@ -172,7 +172,7 @@ function Card() {
               src="https://img.icons8.com/color/96/000000/restriction-shield.png"
               className="mt-4 blink_me"
             />
-            <h2 className="text-light mt-3 blink_me">
+            <h2 className="text-dark text-black mt-3 blink_me">
               Your account has been blocked pls contact admin
             </h2>
           </center>
